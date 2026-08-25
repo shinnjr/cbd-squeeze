@@ -152,9 +152,9 @@ footer a{color:var(--ink)}
 (function(){
 "use strict";
 /* Bands sourced from our published comparison pages (site/simple-tinctures-vs-*.html) */
-var B=[["Charlotte's Web",.09,.13],["Cornbread Hemp",.08,.12],["Medterra",.05,.08],["Lazarus Naturals",.02,.05],
-["cbdMD",.04,.08],["FOCL",.07,.11],["Green Roads",.08,.13],["KOI",.05,.10],["NuLeaf Naturals",.07,.11],
-["+PlusCBD",.06,.11],["R&R Medicinals",.03,.07],["SUNMED",.06,.12],["Verma Farms",.07,.12],["Zatural",.03,.07]];
+var B=[["Charlotte's Web",.09,.13,"charlottes-web"],["Cornbread Hemp",.08,.12,"cornbread-hemp"],["Medterra",.05,.08,"medterra"],["Lazarus Naturals",.02,.05,"lazarus-naturals"],
+["cbdMD",.04,.08,"cbdmd"],["FOCL",.07,.11,"focl"],["Green Roads",.08,.13,"green-roads"],["KOI",.05,.10,"koi-cbd"],["NuLeaf Naturals",.07,.11,"nuleaf-naturals"],
+["+PlusCBD",.06,.11,"pluscbd-oil"],["R&R Medicinals",.03,.07,"r-r-medicinals"],["SUNMED",.06,.12,"sunmed"],["Verma Farms",.07,.12,"verma-farms"],["Zatural",.03,.07,"zatural"]];
 var OUR=127, MG=10000;
 function money(n){return "$"+Math.round(n).toLocaleString()}
 var g=document.getElementById("brandGrid");
@@ -164,7 +164,7 @@ B.forEach(function(b,i){
     g.querySelectorAll(".band").forEach(function(x){x.classList.remove("on")});
     el.classList.add("on");
     var mid=(b[1]+b[2])/2, cost=mid*MG, over=cost-OUR, pct=Math.round(over/OUR*100), yr=over*2.4; /* ~2.4 pouch-equivalents/yr at 40mg/day */
-    document.getElementById("bName").textContent=b[0]+" vs us";
+    document.getElementById("bName").innerHTML=b[0]+' vs us — <a href="/simple-tinctures-vs-'+b[3]+'-price-comparison.html" style="color:var(--amber)">full breakdown</a>';
     document.getElementById("bBand").textContent="$"+b[1].toFixed(2)+"–$"+b[2].toFixed(2)+"/mg";
     document.getElementById("bCost").textContent=money(cost)+" (at midpoint)";
     document.getElementById("bOver").textContent=money(over);
