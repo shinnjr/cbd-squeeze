@@ -3,368 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Tinctures — Stop Paying $0.13/mg for Coconut Oil</title>
-<meta name="description" content="Premixed CBD tinctures are 80% carrier oil and ad budget. Our 10,000mg squeeze-pour concentrate costs $0.0127/mg. You bring the bottle. You bring the oil. You keep the money.">
+<title>Simple Tinctures — 10,000mg CBD concentrate, $0.0127 per mg</title>
+<meta name="description" content="We sell CBD concentrate by the milligram: $127 for 10,000mg. Retail tinctures run $0.03–$0.12 per mg once you divide their price by their label. Here is every number, published.">
 <link rel="canonical" href="https://www.simpletinctures.com/index.html">
-<meta property="og:title" content="Simple Tinctures — The Math-First CBD Concentrate">
-<meta property="og:description" content="$127 ÷ 10,000mg = $0.0127 per mg. Retail runs $0.03–$0.20/mg. Do the math, then keep your money.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#101410; --paper:#f6f3ec; --amber:#d99a2b; --amber-deep:#b57a14;
-  --green:#1a3a2a; --green-deep:#122a1e; --red:#c8401f; --cream:#fffdf7;
-  --mono:'SF Mono',ui-monospace,Menlo,monospace;
+  --paper:#faf8f2; --ink:#191817; --mut:#6d685e; --hair:#ddd8cb;
+  --amber:#b57a14; --green:#274632; --washf4:#f1ede2;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
-.display{font-family:'Archivo Black',sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:-.01em}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+.serif{font-family:'Newsreader',serif}
+.mono{font-family:'Spline Sans Mono',monospace}
 
-/* ---------- sticky receipt bar ---------- */
-#receiptBar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--green);color:var(--cream);
-  font-family:var(--mono);font-size:13px;display:none;justify-content:center;gap:28px;padding:9px 16px;border-bottom:2px solid var(--amber)}
-#receiptBar b{color:var(--amber)}
-#receiptBar .rb-cta{background:var(--amber);color:var(--ink);font-weight:700;padding:2px 12px;border-radius:3px;text-decoration:none;font-family:'Inter';cursor:pointer}
+/* masthead */
+header{border-bottom:1px solid var(--ink)}
+.mast{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0}
+.logo{font-family:'Newsreader',serif;font-weight:600;font-size:21px;text-decoration:none;color:var(--ink)}
+.logo i{font-style:normal;color:var(--amber)}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
+nav a.u{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){nav a:not(.u){display:none}}
 
-/* ---------- nav ---------- */
-nav{position:relative;z-index:90;display:flex;justify-content:space-between;align-items:center;padding:22px 24px;max-width:1200px;margin:0 auto}
-.logo{font-family:'Archivo Black';font-size:20px;color:var(--ink);text-decoration:none}
-.logo span{color:var(--amber-deep)}
-.navlinks a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;margin-left:26px}
-.navlinks a.buy{background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:99px}
-@media(max-width:720px){.navlinks a:not(.buy){display:none}}
+/* hero — flat editorial */
+.hero{padding:84px 0 64px;border-bottom:1px solid var(--hair)}
+.overline{font-family:'Spline Sans Mono';font-size:12.5px;letter-spacing:.08em;color:var(--mut);margin-bottom:26px}
+h1{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(38px,5.6vw,72px);line-height:1.08;letter-spacing:-.01em;max-width:900px}
+h1 b{font-weight:600;background:linear-gradient(transparent 68%,#eedfb9 68%)}
+.deck{max-width:660px;margin-top:28px;font-size:18px;line-height:1.7;color:#33302a}
+.deck b{color:var(--ink)}
+.factrow{display:flex;gap:0;margin-top:48px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);flex-wrap:wrap}
+.fact{flex:1;min-width:180px;padding:20px 22px 18px;border-right:1px solid var(--hair)}
+.fact:last-child{border-right:none}
+.fact .k{font-family:'Spline Sans Mono';font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut)}
+.fact .v{font-family:'Newsreader',serif;font-size:30px;font-weight:500;margin-top:6px}
+.fact .v small{font-size:15px;color:var(--mut);font-family:'Inter'}
+.cta-line{margin-top:36px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.buybtn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15.5px;padding:15px 34px;border-radius:2px;transition:opacity .15s}
+.buybtn:hover{opacity:.85}
+.quiet{font-size:13.5px;color:var(--mut)}
 
-/* ---------- hero ---------- */
-.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative}
-.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:18px}
-h1.mega{font-size:clamp(44px,7.2vw,104px);max-width:1100px}
-h1.mega em{font-style:normal;color:var(--red);position:relative;white-space:nowrap}
-h1.mega em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.08em;background:var(--red);transform:scaleX(0);transform-origin:left;animation:strike 1s .8s forwards cubic-bezier(.7,0,.2,1)}
-@keyframes strike{to{transform:scaleX(1)}}
-.hero-sub{font-size:clamp(16px,2vw,21px);max-width:640px;margin-top:26px;line-height:1.55;font-weight:500}
-.hero-sub b{background:#f5e3b8;padding:0 5px}
-.cta-row{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:17px 34px;border-radius:99px;font-weight:800;font-size:16px;text-decoration:none;border:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,20,16,.18)}
-.btn-primary{background:var(--red);color:#fff}
-.btn-ghost{border:2px solid var(--ink);color:var(--ink);padding:15px 32px}
-.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:12px;color:#666;animation:bob 1.6s infinite}
-@keyframes bob{50%{transform:translate(-50%,8px)}}
-.ticker-wrap{position:absolute;top:84px;left:0;right:0;overflow:hidden;white-space:nowrap;border-block:1px solid #ddd8cb;padding:8px 0;background:var(--cream)}
-.ticker{display:inline-block;animation:tick 30s linear infinite;font-family:var(--mono);font-size:13px;color:#555}
-@keyframes tick{to{transform:translateX(-50%)}}
+/* section scaffolding */
+section{padding:76px 0}
+.shead{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:14px;margin-bottom:38px}
+.shead .no{font-family:'Spline Sans Mono';font-size:13px;color:var(--amber)}
+.shead h2{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(26px,3.4vw,40px)}
 
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(34px);transition:all .7s cubic-bezier(.2,.6,.2,1)}
-.reveal.in{opacity:1;transform:none}
+/* §1 audit table */
+table.audit{width:100%;border-collapse:collapse;font-size:15px}
+.audit th{font-family:'Spline Sans Mono';font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-align:left;padding:10px 14px;border-bottom:1px solid var(--ink);font-weight:400}
+.audit td{padding:14px;border-bottom:1px solid var(--hair);vertical-align:top}
+.audit td.num{font-family:'Spline Sans Mono';white-space:nowrap}
+.audit tr.us td{background:var(--washf4);font-weight:500}
+.audit .why{color:var(--mut);font-size:13.5px;display:block;margin-top:2px}
+.tnote{font-family:'Spline Sans Mono';font-size:12px;color:var(--mut);margin-top:14px;line-height:1.6}
 
-/* ---------- calculator ---------- */
-section.calc{padding:120px 0;background:var(--ink);color:var(--paper)}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-@media(max-width:900px){.calc-grid{grid-template-columns:1fr}}
-.calc h2{font-family:'Archivo Black';font-size:clamp(30px,4vw,52px);text-transform:uppercase;margin-bottom:14px}
-.calc p.lead{color:#b9bfae;margin-bottom:34px;line-height:1.6}
-.field{margin-bottom:30px}
-.field label{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8a9080;margin-bottom:12px}
-input[type=range]{width:100%;-webkit-appearance:none;height:6px;border-radius:3px;background:#39423a;outline:none}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--amber);border:4px solid var(--ink);box-shadow:0 0 0 2px var(--amber);cursor:grab}
-.picks{display:flex;gap:10px;flex-wrap:wrap}
-.pick{padding:11px 20px;border-radius:99px;border:1.5px solid #454f46;background:none;color:#cfd4c6;font-weight:600;font-size:14px;cursor:pointer;transition:.15s}
-.pick.on{background:var(--amber);border-color:var(--amber);color:var(--ink);font-weight:800}
-.receipt-card{background:var(--cream);color:var(--ink);border-radius:14px;padding:34px;box-shadow:0 24px 60px rgba(0,0,0,.45);font-family:var(--mono)}
-.receipt-card h3{font-family:'Archivo Black';letter-spacing:.06em;font-size:14px;border-bottom:2px dashed #bbb;padding-bottom:12px;margin-bottom:16px;text-transform:uppercase}
-.rc-line{display:flex;justify-content:space-between;padding:7px 0;font-size:15px}
-.rc-line.total{border-top:2px dashed #bbb;margin-top:14px;padding-top:16px;font-size:19px;font-weight:700}
-.rc-line.save{color:var(--green);font-weight:800;font-size:17px}
-.rc-note{font-size:11px;color:#888;margin-top:14px;line-height:1.5}
-.big-save{font-family:'Archivo Black';font-size:clamp(40px,5vw,64px);color:var(--green);text-align:center;margin:18px 0 4px}
-.big-save small{display:block;font-family:var(--mono);font-size:12px;color:#777;letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
-.calc-cta{text-align:center;margin-top:22px}
+/* §2 calculator */
+.calcbox{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:880px){.calcbox{grid-template-columns:1fr}}
+.field{margin-bottom:34px}
+.field label{display:block;font-family:'Spline Sans Mono';font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+input[type=range]{width:100%;-webkit-appearance:none;height:2px;background:var(--ink);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);cursor:pointer}
+.bands{display:flex;gap:0;border:1px solid var(--ink);width:max-content;max-width:100%}
+.band{padding:11px 18px;font-family:'Spline Sans Mono';font-size:13px;background:none;border:none;border-right:1px solid var(--ink);cursor:pointer;color:var(--ink)}
+.band:last-child{border-right:none}
+.band.on{background:var(--ink);color:var(--paper)}
+.band small{display:block;font-size:10.5px;opacity:.65;letter-spacing:.02em}
+.sheet{border:1px solid var(--ink);padding:30px 30px 26px;background:var(--cream,#fffdf8)}
+.sheet h3{font-family:'Spline Sans Mono';font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:500;color:var(--mut);border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:6px}
+.row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px dotted var(--hair);font-size:15px}
+.row .r{font-family:'Spline Sans Mono'}
+.row.big{border-bottom:none;padding-top:16px;font-size:17px;font-weight:600}
+.row.big .r{font-size:24px}
+.delta{font-family:'Newsreader',serif;font-size:44px;font-weight:500;color:var(--green);margin:14px 0 2px}
+.delta small{font-family:'Inter';font-size:13px;color:var(--mut);display:block;margin-top:2px}
+.src{font-family:'Spline Sans Mono';font-size:11px;color:var(--mut);margin-top:18px;line-height:1.7;border-top:1px solid var(--hair);padding-top:12px}
 
-/* ---------- teardown story ---------- */
-section.story{padding:130px 0}
-.story h2{font-family:'Archivo Black';font-size:clamp(32px,4.5vw,58px);text-transform:uppercase;max-width:900px;margin-bottom:60px}
-.story h2 span{background:linear-gradient(transparent 62%,#f5d98b 62%)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:860px){.steps{grid-template-columns:1fr}}
-.step{background:var(--cream);border:1.5px solid #e2dccd;border-radius:16px;padding:30px;position:relative;transition:transform .2s}
-.step:hover{transform:translateY(-6px) rotate(-.4deg)}
-.step .n{font-family:'Archivo Black';font-size:44px;color:#eee6d2;position:absolute;top:16px;right:22px}
-.step h4{font-size:19px;font-weight:800;margin-bottom:10px}
-.step p{color:#565b50;line-height:1.6;font-size:15px}
-.step .math{font-family:var(--mono);font-size:13px;background:var(--paper);border-radius:8px;padding:10px 12px;margin-top:14px;color:var(--green-deep)}
+/* §3 how */
+.howgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink)}
+@media(max-width:820px){.howgrid{grid-template-columns:1fr}}
+.howcell{padding:30px;border-right:1px solid var(--hair)}
+.howcell:last-child{border-right:none}
+.howcell .step{font-family:'Spline Sans Mono';font-size:12px;color:var(--amber);margin-bottom:14px}
+.howcell h4{font-family:'Newsreader',serif;font-size:21px;font-weight:500;margin-bottom:10px}
+.howcell p{font-size:14.5px;color:#45423b;line-height:1.7}
 
-/* ---------- comparison slider ---------- */
-section.vs{padding:110px 0;background:linear-gradient(180deg,var(--paper),#efe9da)}
-.vs h2{font-family:'Archivo Black';font-size:clamp(28px,4vw,48px);text-transform:uppercase;text-align:center;margin-bottom:14px}
-.vs .sub{text-align:center;color:#66603f;margin-bottom:50px;font-size:16px}
-.vs-table{max-width:860px;margin:0 auto;background:var(--ink);color:var(--paper);border-radius:18px;overflow:hidden}
-.vs-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;font-family:var(--mono);font-size:14px;border-bottom:1px solid #2c332c}
-.vs-row:last-child{border-bottom:none}
-.vs-row>div{padding:16px 22px}
-.vs-row.head{background:var(--green);font-family:'Inter';font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
-.vs-row .them{color:#ff9d8a}.vs-row .us{color:#ffd98a;font-weight:700}
-@media(max-width:640px){.vs-row{grid-template-columns:1fr 1fr}.vs-row>div:first-child{grid-column:1/3;padding-bottom:4px;color:#9aa092}}
+/* §4 offer */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink)}
+@media(max-width:820px){.offers{grid-template-columns:1fr}}
+.offer{padding:34px 30px;border-right:1px solid var(--hair);position:relative}
+.offer:last-child{border-right:none}
+.offer.rec{background:var(--washf4)}
+.offer .rec-tag{position:absolute;top:-1px;right:-1px;background:var(--amber);color:#fff;font-family:'Spline Sans Mono';font-size:11px;padding:5px 12px;letter-spacing:.06em}
+.offer h3{font-family:'Newsreader',serif;font-size:23px;font-weight:500}
+.offer .pr{font-family:'Newsreader',serif;font-size:46px;font-weight:500;margin:14px 0 0}
+.offer .per{font-family:'Spline Sans Mono';font-size:12.5px;color:var(--mut)}
+.offer ul{list-style:none;margin:20px 0 24px}
+.offer li{font-size:14px;padding:7px 0;border-top:1px dotted var(--hair);color:#45423b}
+.obtn{display:block;text-align:center;border:1px solid var(--ink);padding:12px;font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);transition:.15s}
+.obtn:hover,.offer.rec .obtn{background:var(--ink);color:var(--paper)}
 
-/* ---------- picker (strength) ---------- */
-section.pick-sec{padding:120px 0}
-.picker{max-width:940px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:820px){.picker{grid-template-columns:1fr}}
-.plan{border:2px solid #ddd6c4;border-radius:20px;padding:34px 28px;background:var(--cream);cursor:pointer;transition:.18s;position:relative}
-.plan:hover{transform:translateY(-5px);border-color:var(--ink)}
-.plan.best{border-color:var(--red);box-shadow:0 18px 44px rgba(200,64,31,.14)}
-.plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 14px;border-radius:99px;text-transform:uppercase}
-.plan h3{font-family:'Archivo Black';font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:var(--amber-deep)}
-.plan .price{font-family:'Archivo Black';font-size:42px;margin:12px 0 2px}
-.plan .per{font-family:var(--mono);font-size:13px;color:#6a705f}
-.plan ul{list-style:none;margin-top:18px}
-.plan li{padding:7px 0;font-size:14.5px;border-bottom:1px solid #efe9da}
-.plan li::before{content:"✓ ";color:var(--green);font-weight:800}
-.plan.sel{outline:3px solid var(--ink);outline-offset:3px}
-.plan .go{display:block;text-align:center;margin-top:20px;background:var(--ink);color:var(--paper);border-radius:99px;padding:13px;font-weight:800;font-size:14px}
+/* faq */
+.qa{border-bottom:1px solid var(--hair)}
+.qa button{all:unset;width:100%;display:flex;justify-content:space-between;gap:20px;padding:20px 4px;cursor:pointer;font-family:'Newsreader',serif;font-size:19px;font-weight:500}
+.qa .pm{font-family:'Spline Sans Mono';color:var(--amber);transition:transform .2s}
+.qa.open .pm{transform:rotate(45deg)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .3s ease;color:#45423b;font-size:15px;line-height:1.7}
+.qa.open .ans{padding:0 4px 22px}
 
-/* ---------- proof strip ---------- */
-.strip{background:var(--amber);padding:18px 0;overflow:hidden;white-space:nowrap}
-.strip-inner{display:inline-block;animation:tick 22s linear infinite;font-family:'Archivo Black';font-size:15px;text-transform:uppercase;color:var(--ink)}
-.strip span{margin-right:44px}
-
-/* ---------- faq ---------- */
-section.faq{padding:120px 0;background:var(--green-deep);color:var(--paper)}
-.faq h2{font-family:'Archivo Black';font-size:clamp(30px,4vw,50px);text-transform:uppercase;text-align:center;margin-bottom:56px}
-.qa{max-width:820px;margin:0 auto 14px;border:1px solid #2e4438;border-radius:14px;overflow:hidden;background:#16302 4}
-.qa{background:#163024}
-.qa button{width:100%;background:none;border:none;color:var(--paper);font-size:17px;font-weight:700;text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.qa .plus{font-size:26px;color:var(--amber);transition:transform .25s;font-family:'Archivo Black'}
-.qa.open .plus{transform:rotate(45deg)}
-.qa .ans{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#c9cfbf;line-height:1.65;font-size:15px}
-.qa.open .ans{padding:0 26px 24px}
-
-/* ---------- final cta + footer ---------- */
-section.final{padding:130px 24px;text-align:center;background:radial-gradient(ellipse at center,#1d4534 0%,var(--green-deep) 70%);color:var(--paper)}
-.final h2{font-family:'Archivo Black';font-size:clamp(36px,6vw,84px);text-transform:uppercase}
-.final p{color:#bcc3b0;margin:20px auto 38px;max-width:560px;font-size:17px;line-height:1.6}
-footer{background:var(--ink);color:#8b9184;padding:44px 24px;font-size:12.5px;line-height:1.7}
-footer .container{display:flex;flex-direction:column;gap:14px}
-footer a{color:#c4c9bb}
-
-.age-badge{position:fixed;bottom:18px;right:18px;background:var(--red);color:#fff;font-weight:800;font-size:12px;padding:6px 12px;border-radius:6px;z-index:99;letter-spacing:.05em}
+/* final + footer */
+.final{border-top:1px solid var(--ink);text-align:center;padding:96px 28px}
+.final h2{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4.6vw,58px);max-width:760px;margin:0 auto;line-height:1.15}
+footer{border-top:1px solid var(--hair);padding:36px 0;font-size:12.5px;color:var(--mut);line-height:1.8}
+footer a{color:var(--ink)}
+.age{position:fixed;top:auto;bottom:16px;right:16px;border:1px solid var(--ink);background:var(--paper);font-family:'Spline Sans Mono';font-size:11px;padding:4px 9px;z-index:50}
 </style>
 </head>
 <body>
 
-<div id="receiptBar">🧾 <span>$127 ÷ 10,000mg = <b>$0.0127/mg</b></span><span>retail avg: <s style="color:#ff9d8a">$0.08/mg</s></span><span>you save: <b>~84%</b></span><a class="rb-cta" href="#pick">GET MINE</a></div>
+<header><div class="wrap mast">
+  <a class="logo" href="/">Simple Tinctures<i>.</i></a>
+  <nav>
+    <a href="#audit">The audit</a>
+    <a href="#calc">Calculator</a>
+    <a href="#buy">Buy</a>
+    <a class="u" href="/order.html">Checkout →</a>
+  </nav>
+</div></header>
 
-<nav>
-  <a class="logo" href="/">Simple<span>&nbsp;Tinctures</span></a>
-  <div class="navlinks">
-    <a href="#calc">The Math</a>
-    <a href="#how">How It Works</a>
-    <a href="#faq">FAQ</a>
-    <a class="buy" href="#pick">Buy — $127</a>
+<div class="hero wrap">
+  <p class="overline">HEMP-DERIVED CBD · &lt;0.3% Δ9-THC · THIRD-PARTY BATCH CoA · 18+</p>
+  <h1>Everyone sells you a bottle. We sell you <b>milligrams.</b></h1>
+  <p class="deck">Divide any tincture's price by its label and you get its real cost per milligram — usually <b>$0.03 to $0.12</b>. Most of what you're holding is MCT carrier oil, glass, and somebody's ad budget. We skip all three: one pouch, <b>10,000mg of concentrate, $127 total</b>. Your bottle, your oil, sixty seconds.</p>
+  <div class="factrow">
+    <div class="fact"><div class="k">Concentrate</div><div class="v">10,000 <small>mg CBD</small></div></div>
+    <div class="fact"><div class="k">Price</div><div class="v">$127 <small>one time</small></div></div>
+    <div class="fact"><div class="k">Your cost</div><div class="v">$0.0127<small>/mg</small></div></div>
+    <div class="fact"><div class="k">Retail range</div><div class="v">$0.03–0.12 <small>/mg</small></div></div>
+    <div class="fact"><div class="k">Supply @ 40mg/day</div><div class="v">~8 <small>months</small></div></div>
   </div>
-</nav>
-
-<header class="hero container">
-  <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
-  <div class="kicker">Hemp-derived CBD · &lt;0.3% Δ9-THC · Batch CoA on every pouch · 18+</div>
-  <h1 class="mega display">Stop paying <em>$0.13 a milligram</em> for coconut oil.</h1>
-  <p class="hero-sub">A "premium" tincture is mostly <b>MCT carrier oil</b>, bottled in a lab that spent your money on ads. We sell the concentrate only: <b>10,000mg for $127 — $0.0127 per milligram.</b> Squeeze it into any bottle with oil you already own.</p>
-  <div class="cta-row">
-    <a class="btn btn-primary" href="#calc">Run Your Numbers →</a>
-    <a class="btn btn-ghost" href="#pick">Skip to the good part</a>
+  <div class="cta-line">
+    <a class="buybtn" href="#calc">Compare it against what you pay now ↓</a>
+    <span class="quiet">No subscription traps. Google Pay checkout. CoA in every box.</span>
   </div>
-  <div class="scroll-hint">▼ scroll. we'll wait.</div>
-</header>
+</div>
 
-<section class="calc" id="calc">
-  <div class="container calc-grid">
-    <div class="reveal">
-      <h2>The Receipt<br>Calculator</h2>
-      <p class="lead">Drag the sliders. Watch what the premixed industry hopes you never compute.</p>
+<section id="audit"><div class="wrap">
+  <div class="shead"><span class="no">§1</span><h2>Where a $60 tincture actually goes</h2></div>
+  <table class="audit">
+    <tr><th>Cost center</th><th>Premixed bottle</th><th>Simple Tinctures</th></tr>
+    <tr><td>CBD extract<span class="why">the only part that matters</span></td><td class="num">~$6–9</td><td class="num">100% of the pouch</td></tr>
+    <tr><td>Carrier oil (MCT)<span class="why">you already own oil</span></td><td class="num">~$1–2</td><td class="num">$0 — yours</td></tr>
+    <tr><td>Glass bottle, dropper, carton</td><td class="num">~$2–4</td><td class="num">$0 — yours</td></tr>
+    <tr><td>Premixing &amp; fulfillment labor</td><td class="num">~$4–7</td><td class="num">$0 — 60 seconds of shaking</td></tr>
+    <tr><td>Marketing &amp; affiliate margin<span class="why">influencer codes aren't free</span></td><td class="num">~$25–35</td><td class="num">$0 — we don't run ads</td></tr>
+    <tr class="us"><td>What 1,000mg ends up costing you</td><td class="num">$30–60+</td><td class="num">$12.70</td></tr>
+  </table>
+  <p class="tnote">Ranges reflect typical DTC cost structures reported across major brands (Charlotte's Web ≈ $0.11/mg, Cornbread ≈ $0.10/mg, Medterra ≈ $0.06–0.07/mg list pricing, 2026). Exact splits vary by brand; the pattern doesn't. We publish batch CoAs so you can verify potency independently — judge quality by the certificate, price by the division.</p>
+</div></section>
+
+<section id="calc" style="background:var(--washf4);border-block:1px solid var(--hair)"><div class="wrap">
+  <div class="shead"><span class="no">§2</span><h2>Your numbers, not our marketing</h2></div>
+  <div class="calcbox">
+    <div>
       <div class="field">
-        <label>Monthly CBD you actually want: <span id="mgVal" style="color:var(--amber)">1,500mg</span></label>
-        <input type="range" id="mgRange" min="250" max="10000" step="250" value="1500">
+        <label>CBD per month you want on hand — <span id="mgOut" class="mono" style="color:var(--ink)">1,500 mg</span></label>
+        <input type="range" id="mg" min="250" max="10000" step="250" value="1500">
       </div>
       <div class="field">
-        <label>Retail price you've been paying:</label>
-        <div class="picks" id="ppmPicks">
-          <button class="pick on" data-ppm="0.08">$0.08/mg — typical online</button>
-          <button class="pick" data-ppm="0.133">$0.13/mg — premium DTC</button>
-          <button class="pick" data-ppm="0.05">$0.05/mg — discount store</button>
+        <label>The band your current brand sits in (price ÷ label-mg)</label>
+        <div class="bands" id="bands">
+          <button class="band on" data-p="0.05">≈$0.05<small>value tier</small></button>
+          <button class="band" data-p="0.07">≈$0.07<small>mid-market</small></button>
+          <button class="band" data-p="0.11">≈$0.11<small>premium DTC</small></button>
         </div>
       </div>
-      <div class="field">
-        <label>Bottles you rebuy each month:</label>
-        <div class="picks" id="freqPicks">
-          <button class="pick on" data-freq="1">1×</button>
-          <button class="pick" data-freq="2">2×</button>
-          <button class="pick" data-freq="3">3×</button>
-        </div>
-      </div>
+      <p class="quiet" style="font-size:13.5px;line-height:1.7;max-width:420px">Unsure which band? Flip your bottle, multiply its milligrams by these rates, and see which matches the receipt. That number — not the sticker price — is what we compete against.</p>
     </div>
-    <div class="reveal">
-      <div class="receipt-card" id="rcard">
-        <h3>🧾 Simple Tinctures — Receipt</h3>
-        <div class="rc-line"><span>Your retail cost / month</span><span id="rRetail">$120.00</span></div>
-        <div class="rc-line"><span>Ours (same mg)</span><span id="rOurs">$19.05</span></div>
-        <div class="rc-line"><span>Carrier oil you supply</span><span>~$3 (your kitchen)</span></div>
-        <div class="rc-line total"><span>NEW MONTHLY</span><span id="rTotal">$22.05</span></div>
-        <div class="big-save"><span id="rSavePct">82%</span> SAVED<small>every single month</small></div>
-        <div class="rc-line save"><span>Year-one savings</span><span id="rSaveYr">$1,175</span></div>
-        <p class="rc-note">Math: your mg × retail $/mg vs our $0.0127/mg concentrate. Carrier-oil estimate assumes generic MCT at grocery prices. No medical claims anywhere on this site — this page only does arithmetic.</p>
-        <div class="calc-cta"><a class="btn btn-primary" href="#pick">Lock In That Math →</a></div>
-      </div>
+    <div class="sheet">
+      <h3>Same milligrams, two ways</h3>
+      <div class="row"><span>Retail bottles for <b id="qMg">1,500</b>mg/mo</span><span class="r" id="rRet">$75 /mo</span></div>
+      <div class="row"><span>Our concentrate, same mg</span><span class="r" id="rOurs">$19.05 /mo</span></div>
+      <div class="row"><span>MCT oil from your kitchen</span><span class="r">~$2 /mo</span></div>
+      <div class="row big"><span>New all-in</span><span class="r" id="rAll">$21.05 /mo</span></div>
+      <div class="delta"><span id="dPct">72%</span> lower<small id="dYr">$647 kept per year · same plant, verified by CoA</small></div>
+      <a class="buybtn" style="display:block;text-align:center" href="#buy">Price my supply →</a>
+      <p class="src">Method: monthly mg ÷ 1,000 × band rate vs. monthly mg × $0.0127 + ~$2 carrier oil. Pouch covers ~8 months at 40mg/day — you're seeing its monthly cost, not its sticker. Figures are arithmetic, not medical guidance.</p>
     </div>
   </div>
-</section>
+</div></section>
 
-<div class="strip"><div class="strip-inner"><span>$0.0127/MG</span><span>NO CARRIER-OIL MARKUP</span><span>NO AD BUDGET IN YOUR BOTTLE</span><span>COA ON EVERY BATCH</span><span>YOU MIX IT. YOU OWN IT.</span><span>$0.0127/MG</span><span>NO CARRIER-OIL MARKUP</span><span>NO AD BUDGET IN YOUR BOTTLE</span><span>COA ON EVERY BATCH</span><span>YOU MIX IT. YOU OWN IT.</span></div></div>
-
-<section class="story container" id="how">
-  <h2 class="reveal">We took apart a <span>$200 tincture</span>. Here's where your money actually goes.</h2>
-  <div class="steps">
-    <div class="step reveal"><div class="n">01</div><h4>The bottle lies by volume</h4><p>A 30mL "1500mg" bottle weighs less than a AA battery. You're paying premium pricing for dropper logistics and water-weight shipping.</p><div class="math">$200 ÷ 1500mg = $0.133/mg</div></div>
-    <div class="step reveal"><div class="n">02</div><h4>Most of it was never CBD</h4><p>First ingredient on nearly every label: MCT coconut oil. You paid DTC prices to have someone else stir oil.</p><div class="math">~80% of volume = carrier oil</div></div>
-    <div class="step reveal"><div class="n">03</div><h4>We deleted their whole job</h4><p>Concentrate pouch. 10,000mg. Your bottle, your oil, sixty seconds of shaking. Same plant, same mg, one-tenth the price.</p><div class="math">$127 ÷ 10,000mg = $0.0127/mg</div></div>
+<section id="how"><div class="wrap">
+  <div class="shead"><span class="no">§3</span><h2>Sixty seconds, once every few months</h2></div>
+  <div class="howgrid">
+    <div class="howcell"><div class="step">STEP 01</div><h4>Squeeze</h4><p>One pouch holds 10,000mg of CBD concentrate. Pour as much as your routine needs into any dark glass bottle — a full dropper-bottle's worth takes seconds.</p></div>
+    <div class="howcell"><div class="step">STEP 02</div><h4>Add your oil</h4><p>MCT, olive, whatever food-grade oil you keep in the kitchen. Top the bottle, cap it, shake. You just made the product they charged you $60 for.</p></div>
+    <div class="howcell"><div class="step">STEP 03</div><h4>Keep the difference</h4><p>Store the rest of the pouch sealed and cool. At 40mg/day it's an eight-month supply. Check the batch CoA anytime — we post every one.</p></div>
   </div>
-</section>
+</div></section>
 
-<section class="vs">
-  <div class="container">
-    <h2>Premixed vs. Ours</h2>
-    <p class="sub">Same 1,500mg/month habit. Line by line.</p>
-    <div class="vs-table reveal">
-      <div class="vs-row head"><div></div><div>Premixed bottle</div><div>Simple Tinctures</div></div>
-      <div class="vs-row"><div>Price per mg</div><div class="them">$0.08–$0.20</div><div class="us">$0.0127</div></div>
-      <div class="vs-row"><div>What's in it</div><div class="them">CBD + ~80% MCT oil</div><div class="us">100% CBD concentrate</div></div>
-      <div class="vs-row"><div>What you're funding</div><div class="them">Their ad budget</div><div class="us">Your bank account</div></div>
-      <div class="vs-row"><div>Monthly cost @1,500mg</div><div class="them">$120+</div><div class="us">~$22 incl. your oil</div></div>
-      <div class="vs-row"><div>Refill shipping weight</div><div class="them">Glass + liquid</div><div class="us">A soft pouch</div></div>
+<section id="buy" style="border-top:1px solid var(--hair)"><div class="wrap">
+  <div class="shead"><span class="no">§4</span><h2>Three ways to buy the same math</h2></div>
+  <div class="offers">
+    <div class="offer">
+      <h3>Single pouch</h3>
+      <div class="pr">$127</div><div class="per">$0.0127 /mg · 10,000mg</div>
+      <ul><li>~8 months at 40mg/day</li><li>Batch CoA included</li><li>Free shipping, 18+</li></ul>
+      <a class="obtn" href="/order.html?plan=single">Buy single — $127</a>
+    </div>
+    <div class="offer rec">
+      <span class="rec-tag">LOWEST COST/MG</span>
+      <h3>Double pouch</h3>
+      <div class="pr">$217</div><div class="per">$0.0109 /mg · 20,000mg</div>
+      <ul><li>$108.50 per pouch</li><li>~16 months at 40mg/day</li><li>Both CoAs included</li></ul>
+      <a class="obtn" href="/order.html?plan=double">Buy double — $217</a>
+    </div>
+    <div class="offer">
+      <h3>Monthly refill</h3>
+      <div class="pr">$107<small style="font-size:15px;color:var(--mut)"> /mo</small></div>
+      <div class="per">$0.0107 /mg · 10,000mg</div>
+      <ul><li>Freshest batch monthly</li><li>Pause or cancel anytime</li><li>CoA emailed first</li></ul>
+      <a class="obtn" href="/order.html?plan=sub">Start monthly — $107</a>
     </div>
   </div>
-</section>
+</div></section>
 
-<section class="pick-sec container" id="pick">
-  <div style="text-align:center;margin-bottom:54px" class="reveal">
-    <h2 class="display" style="font-size:clamp(30px,4.5vw,56px)">Pick your setup</h2>
-    <p style="color:#66603f;margin-top:12px">One-time Google Pay checkout. Subscribe later if you love the math.</p>
-  </div>
-  <div class="picker reveal">
-    <div class="plan" data-plan="single">
-      <h3>Starter Squeeze</h3>
-      <div class="price">$127</div><div class="per">$0.0127/mg · 10,000mg pouch</div>
-      <ul><li>~8 months @ 40mg/day</li><li>Batch CoA included</li><li>Free shipping</li></ul>
-      <span class="go">Choose Starter</span>
-    </div>
-    <div class="plan best sel" data-plan="double">
-      <div class="tag">Best value</div>
-      <h3>Double Down</h3>
-      <div class="price">$217</div><div class="per">$0.0109/mg · 2× 10,000mg pouches</div>
-      <ul><li>Everything in Starter ×2</li><li>Effective $108.50/pouch</li><li>16-month supply @ 40mg/day</li></ul>
-      <span class="go">Choose Double</span>
-    </div>
-    <div class="plan" data-plan="sub">
-      <h3>Math Club Monthly</h3>
-      <div class="price">$107<span style="font-size:16px;font-family:Inter">/mo</span></div>
-      <div class="per">$0.0107/mg · new 10,000mg pouch monthly</div>
-      <ul><li>Cheapest per-mg tier</li><li>Pause or cancel anytime</li><li>Priority batch CoAs emailed</li></ul>
-      <span class="go">Choose Monthly</span>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:40px" id="checkoutCta">
-    <button class="btn btn-primary" style="font-size:18px;padding:20px 46px" onclick="location.href='/order.html?plan='+encodeURIComponent(selPlan)">Continue with <span id="ctaAmt">$217</span> →</button>
-    <p style="font-family:var(--mono);font-size:12px;color:#8a8570;margin-top:14px">Google Pay checkout · 18+ · Hemp-derived, &lt;0.3% Δ9-THC · Third-party CoA every batch</p>
-  </div>
-</section>
+<section style="padding-top:20px"><div class="wrap">
+  <div class="shead"><span class="no">§5</span><h2>Questions people ask before dividing</h2></div>
+  <div class="qa"><button>Is inexpensive CBD automatically lower quality?<span class="pm">+</span></button><div class="ans"><p>Not inherently — price mostly reflects premixing labor, packaging, and marketing spend. Quality is verifiable: every batch ships with a third-party certificate of analysis covering potency, pesticides, and heavy metals. Read the certificate, then compare prices by dividing. Two separate judgments.</p></div></div>
+  <div class="qa"><button>Why is yours so much cheaper?<span class="pm">+</span></button><div class="ans"><p>We removed three line items, not quality: carrier oil (supply your own), bottling labor (you pour), and paid customer acquisition (no ads, no influencer codes). The hemp and extraction standards are the same class as the big brands — the certificate proves it batch by batch.</p></div></div>
+  <div class="qa"><button>What exactly do I need at home?<span class="pm">+</span></button><div class="ans"><p>A dark glass bottle and a food-grade oil — most people use MCT or olive oil. Squeeze, top up, shake, done. Full walkthrough with measurements lives in the DIY guide.</p></div></div>
+  <div class="qa"><button>How long does a pouch keep?<span class="pm">+</span></button><div class="ans"><p>Sealed and stored cool and dark, the concentrate is shelf-stable for the lot's tested window (printed on the pouch and CoA). Mix one bottle at a time rather than the whole pouch.</p></div></div>
+  <div class="qa"><button>Is this federally legal?<span class="pm">+</span></button><div class="ans"><p>Yes — hemp-derived CBD under 0.3% Δ9-THC, farm-bill compliant, 18+ purchase. Every shipment includes its third-party lab certificate.</p></div></div>
+</div></section>
 
-<script>var selPlan="double";</script>
+<div class="final">
+  <h2 class="serif">The sticker price was never the price.<br>Now you know.</h2>
+  <p class="quiet" style="margin:22px 0 34px">10,000mg · $127 · $0.0127 per milligram · CoA in every box</p>
+  <a class="buybtn" href="/order.html?plan=double" style="font-size:17px;padding:18px 44px">Get the Double — best $/mg →</a>
+</div>
 
-<section class="faq" id="faq">
-  <h2>Straight Answers</h2>
-  <div class="qa"><button>Wait — is cheap CBD just worse CBD?<span class="plus">+</span></button><div class="ans"><p>Price usually reflects marketing and premixing labor, not extract quality. Judge quality with third-party batch certificates (potency, pesticides, heavy metals) — we publish a CoA for every batch. Judge price separately with dollars-per-milligram. Those are two different questions and the industry benefits when you mix them up.</p></div></div>
-  <div class="qa"><button>Do I need special equipment to mix it?<span class="plus">+</span></button><div class="ans"><p>No. Any dark glass bottle you already own, any food-grade oil (most people use MCT or olive oil from the kitchen), squeeze, shake, done in under a minute. Full guide lives at our DIY page.</p></div></div>
-  <div class="qa"><button>Why so much cheaper than everything else?<span class="plus">+</span></button><div class="ans"><p>We deleted three cost centers: carrier oil (you add your own), bottling labor (you do the 60-second pour), and customer-acquisition ad spend (you found us through math, not an Instagram ad). Nothing about the CBD itself is compromised — same hemp, same extraction standards, full CoA.</p></div></div>
-  <div class="qa"><button>How long does one pouch last?<span class="plus">+</span></button><div class="ans"><p>At 40mg/day, a 10,000mg pouch lasts about 8 months. At 100mg/day, about 3 months. Concentrate is shelf-stable; mix what you need per bottle rather than all at once.</p></div></div>
-  <div class="qa"><button>Is this legal?<span class="plus">+</span></button><div class="ans"><p>Yes — hemp-derived CBD containing less than 0.3% Δ9-THC under federal law. Every batch ships with its third-party certificate of analysis. 18+ only.</p></div></div>
-</section>
-
-<section class="final">
-  <h2 class="reveal">The industry bet<br>you wouldn't<br>do the math.</h2>
-  <p>You just did. Ten thousand milligrams. One hundred twenty-seven dollars. Thirteen hundredths of a cent per milligram.</p>
-  <a class="btn btn-primary" style="font-size:19px;padding:22px 52px" href="/order.html?plan=double">Get My Pouch — $127 →</a>
-</section>
-
-<footer><div class="container">
-  <div><b style="color:#c4c9bb">Simple Tinctures</b> · Denver, CO · <a href="/lab-results.html">Lab Results</a> · <a href="/faq.html">Full FAQ</a> · <a href="/diy-cbd-tincture-guide.html">DIY Guide</a></div>
-  <div>These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Not for sale to persons under 18. Consult a physician if pregnant, nursing, or taking medication. Hemp-derived, &lt;0.3% Δ9-THC.</div>
-  <div>© 2026 Simple Tinctures · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
+<footer><div class="wrap">
+  Simple Tinctures · Denver, CO · <a href="/lab-results.html">Lab results</a> · <a href="/faq.html">Full FAQ</a> · <a href="/diy-cbd-tincture-guide.html">DIY guide</a> · <a href="/best-value-cbd.html">Value guide</a><br>
+  These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Not for sale to persons under 18. Consult a physician if pregnant, nursing, or taking medication. Hemp-derived, &lt;0.3% Δ9-THC.<br>
+  © 2026 Simple Tinctures · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>
 </div></footer>
 
-<div class="age-badge">18+</div>
+<span class="age">18+</span>
 
 <script>
 (function(){
 "use strict";
-/* ticker */
-var phrases=["$0.0127/MG","RETAIL RUNS $0.08–$0.20","SAME PLANT. ONE-TENTH THE PRICE.","YOUR BOTTLE. YOUR OIL.","COA EVERY BATCH.","NO ADS IN YOUR BOTTLE."];
-document.getElementById("ticker").textContent=(phrases.join("  ///  ")+"  ///  ").repeat(4);
-
-/* scroll reveal */
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:.14});
-document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
-
-/* sticky receipt bar appears after hero */
-var bar=document.getElementById("receiptBar"),hero=document.querySelector(".hero");
-addEventListener("scroll",function(){bar.style.display=(scrollY>hero.offsetHeight*0.75)?"flex":"none"},{passive:true});
-
-/* calculator */
-var ppm=0.08,freq=1,OUR=0.0127,OIL=3;
-function fmt(n){return "$"+n.toLocaleString(undefined,{maximumFractionDigits:0})}
-function calc(){
-  var mg=+document.getElementById("mgRange").value;
-  document.getElementById("mgVal").textContent=mg.toLocaleString()+"mg";
-  var retail=mg*ppm*freq, ours=Math.max(mg*OUR*freq,OIL);
-  var save=Math.round((1-(ours/retail))*100);
-  document.getElementById("rRetail").textContent=fmt(retail);
-  document.getElementById("rOurs").textContent=fmt(mg*OUR*freq);
-  document.getElementById("rTotal").textContent=fmt(ours)+"/mo";
-  document.getElementById("rSavePct").textContent=save+"%";
-  document.getElementById("rSaveYr").textContent=fmt(Math.max(0,(retail-ours)*12));
-  /* pulse card */
-  var c=document.getElementById("rcard");c.style.transform="scale(1.015)";setTimeout(function(){c.style.transform=""},140);
-}
-document.getElementById("mgRange").addEventListener("input",calc);
-document.getElementById("ppmPicks").addEventListener("click",function(e){
-  var b=e.target.closest(".pick");if(!b)return;
-  this.querySelectorAll(".pick").forEach(function(x){x.classList.remove("on")});b.classList.add("on");
-  ppm=parseFloat(b.dataset.ppm);calc();});
-document.getElementById("freqPicks").addEventListener("click",function(e){
-  var b=e.target.closest(".pick");if(!b)return;
-  this.querySelectorAll(".pick").forEach(function(x){x.classList.remove("on")});b.classList.add("on");
-  freq=parseInt(b.dataset.freq);calc();});
-calc();
-
-/* plan picker */
-var amounts={single:"$127",double:"$217",sub:"$107"};
-document.querySelectorAll(".plan").forEach(function(p){
-  p.addEventListener("click",function(){
-    document.querySelectorAll(".plan").forEach(function(x){x.classList.remove("sel")});
-    p.classList.add("sel");selPlan=p.dataset.plan;
-    document.getElementById("ctaAmt").textContent=amounts[selPlan];
-  });
-});
-
-/* faq accordion */
-document.querySelectorAll(".qa button").forEach(function(btn){
-  btn.addEventListener("click",function(){
-    var qa=btn.parentElement,open=qa.classList.contains("open");
+/* accordion */
+document.querySelectorAll(".qa button").forEach(function(b){
+  b.addEventListener("click",function(){
+    var qa=b.parentElement,open=qa.classList.contains("open");
     document.querySelectorAll(".qa").forEach(function(x){x.classList.remove("open");x.querySelector(".ans").style.maxHeight=null});
     if(!open){qa.classList.add("open");var a=qa.querySelector(".ans");a.style.maxHeight=a.scrollHeight+"px";}
   });
 });
+/* calculator — honest math: no multipliers, monthly view of both paths */
+var ppm=0.05,OIL=2,OUR=0.0127;
+function fmt(n){return "$"+n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}
+function calc(){
+  var mg=+document.getElementById("mg").value;
+  document.getElementById("mgOut").textContent=mg.toLocaleString()+" mg";
+  document.getElementById("qMg").textContent=mg.toLocaleString();
+  var ret=mg/1000*ppm*1000;               /* retail monthly */
+  var ours=mg*OUR;                        /* our monthly */
+  var all=ours+OIL;
+  var pct=Math.round((1-all/ret)*100);
+  if(ret<=all){pct=0;}
+  document.getElementById("rRet").textContent=fmt(ret)+" /mo";
+  document.getElementById("rOurs").textContent=fmt(ours)+" /mo";
+  document.getElementById("rAll").textContent=fmt(all)+" /mo";
+  document.getElementById("dPct").textContent=pct+"%";
+  document.getElementById("dYr").textContent="$"+Math.max(0,Math.round((ret-all)*12)).toLocaleString()+" kept per year · same plant, verified by CoA";
+}
+document.getElementById("mg").addEventListener("input",calc);
+document.getElementById("bands").addEventListener("click",function(e){
+  var b=e.target.closest(".band");if(!b)return;
+  this.querySelectorAll(".band").forEach(function(x){x.classList.remove("on")});b.classList.add("on");
+  ppm=parseFloat(b.dataset.p);calc();
+});
+calc();
 })();
 </script>
 </body>
