@@ -106,8 +106,8 @@ footer a{color:var(--ink)}
   </div>
 
   <div id="afterReveal">
-    <a class="buybtn" href="#calc">See your savings ↓</a>
-    <a class="buybtn" style="background:var(--green)" href="#buy">Skip — I'm in. $127 →</a>
+    <a class="buybtn" id="ctaA" data-st="cta_hero" data-label="savings-first" href="#calc">See your savings ↓</a>
+    <a class="buybtn" id="ctaB" data-st="cta_hero" data-label="skip-to-buy" style="background:var(--green)" href="#buy">Skip — I'm in. $127 →</a>
     <span class="quiet">Google Pay · free ship · CoA in box</span>
   </div>
 
@@ -269,6 +269,14 @@ document.getElementById("mg").addEventListener("input",calc);
 calc();
 })();
 </script>
-<script src="/js/track.js"></script>
+<script src="/js/track.js">
+/* hero CTA order A/B — sticky per session */
+try{
+  var k="st_cta_order", v=sessionStorage.getItem(k);
+  if(!v){v=Math.random()<0.5?"A":"B";sessionStorage.setItem(k,v);}
+  var a=document.getElementById("ctaA"),b=document.getElementById("ctaB");
+  if(v==="B"&&a&&b){b.parentNode.insertBefore(a,b);a.dataset.label="savings-second";b.dataset.label="buy-first";}
+}catch(e){}
+</script>
 </body>
 </html>
