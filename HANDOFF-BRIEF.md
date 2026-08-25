@@ -12,8 +12,14 @@ Waterfall = model routing (11 providers). NEVER ask James to repeat decided thin
 - Product: large squeeze-pour concentrate bottles, ~10,000mg class. Target: 5 sales/day.
 - Price: $127 hero ($0.0127/mg), ladder $127/$217-double/$107-mo-sub. Anchor $159 strikethrough.
   Full rationale: ~/projects/swarm/artifacts/G5-T03.md
-- Demographics: PRIMARY = pet owners (74% of CBD buyers own pets, humanize pet data);
-  SECONDARY = DIY home-mixers; TERTIARY = smoke-shop wholesale ($150/case W1).
+- POSITIONING (James, Aug 24 evening - SUPERSEDES pet-vertical): VALUE DISRUPTION.
+  We are the best value on the web. NOT competing with premixed-tincture companies or their ad budgets.
+  Enemy = hidden markup: premixed bottles are mostly carrier oil (MCT) + shipping water-weight;
+  customers are unknowingly paying premium prices for oil they could buy themselves.
+  Customer = price-aware buyer upset at online CBD prices who sees they're paying for someone
+  else to premix+ship. They squeeze an oz of our concentrate into THEIR OWN bottle with THEIR
+  OWN oil of choice (usually MCT) and save big. Copy leads with the math: what premixed costs
+  per mg vs us. No pet-vertical focus for now.
 - Payments: GOOGLE PAY is the checkout path. NEVER mention/flag Venmo/PayPal/Zelle again.
 - Marketing: FREE ONLY. No paid ads ever. No FB Marketplace. Organic social + SEO + grassroots.
 - Compliance: no medical claims, FDA footer mandatory, 18+, CoA badge, hemp <0.3% Δ9.

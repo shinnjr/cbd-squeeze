@@ -594,7 +594,20 @@ _bot: w48523-1787617871 | model: mistral/mistral-small-latest | tokens: 4268
             font-weight: 600;
             cursor: pointer;
         }
-    </style>
+    
+    .reveal { padding: 4rem 0; }
+    .reveal-sub { color: #555; max-width: 640px; margin: 0 auto 2.5rem; }
+    .reveal-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; text-align: left; }
+    .cost-card { background:#fff; border:1px solid #e5e0d5; border-radius:12px; padding:1.75rem; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+    .cost-card.highlight { border-color:var(--accent-green,#2a5c3a); border-width:2px; background:#f4faf5; }
+    .cost-card ul { list-style:none; padding:0; margin:0 0 1rem; }
+    .cost-card li { padding:.4rem 0; border-bottom:1px dashed #eee; font-size:.95rem; }
+    .cost-card .total { font-weight:700; font-size:1.1rem; margin:.5rem 0 0; color:var(--accent-green,#2a5c3a); }
+    .how { padding:4rem 0; background:#faf8f4; }
+    .how-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; margin-top:2rem; }
+    .step { background:#fff; border-radius:12px; padding:2rem 1.25rem; border:1px solid #e5e0d5; }
+    .step-n { display:inline-block; width:2.2rem; height:2.2rem; line-height:2.2rem; border-radius:50%; background:var(--dark-green,#1a3d2e); color:#fff; font-weight:700; margin-bottom:.75rem; }
+</style>
 </head>
 <body>
     <!-- Age Gate -->
@@ -625,8 +638,9 @@ _bot: w48523-1787617871 | model: mistral/mistral-small-latest | tokens: 4268
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <h1>One Squeeze. Precise Doses. No Droppers.</h1>
-        <p class="sub">10,000mg of hemp-derived CBD in a squeeze-pour bottle — built for pet owners and DIY mixers who are tired of syringes and counting drops.</p>
+        <h1>Stop Paying $60 for Oil You Could Buy for $8.</h1>
+        <p class="sub2">Premixed tinctures are mostly carrier oil. You're paying premium prices for someone to mix it and ship the water-weight to you.</p>
+        <p class="sub">Simple Tinctures sells you the concentrate only: one squeeze-and-measure oz, 10,000mg, into YOUR bottle with YOUR oil (MCT works great). Same finished tincture. A fraction of the price.</p>
         <div class="price-row">
           <span class="price-old">$159</span>
           <span class="price">$127</span>
@@ -637,6 +651,31 @@ _bot: w48523-1787617871 | model: mistral/mistral-small-latest | tokens: 4268
       </div>
     </section>
 
+    
+    <!-- THE REVEAL: where your money actually goes -->
+    <section class="reveal"><div class="container">
+      <h2>Where Your Money Actually Goes</h2>
+      <p class="reveal-sub">A typical 10,000mg premixed tincture online costs $180&ndash;$240. Here's the honest math:</p>
+      <div class="reveal-grid">
+        <div class="cost-card"><h3>Typical Premixed Bottle</h3><ul>
+          <li>CBD concentrate: ~$25</li>
+          <li>Carrier oil (MCT/hemp seed): ~$8</li>
+          <li>Bottle, label, box: ~$4</li>
+          <li>Marketing &amp; ad spend: ~$80&ndash;$120</li>
+          <li>Shipping &amp; handling: ~$10</li>
+          <li>Their margin: the rest</li></ul>
+          <p class="total">You pay: ~$200</p></div>
+        <div class="cost-card highlight"><h3>Simple Tinctures Way</h3><ul>
+          <li>Our concentrate (10,000mg): $127 &rarr; or $54/bottle on the double</li>
+          <li>Your oil of choice: ~$8 at any grocery</li>
+          <li>Your bottle you already own: $0</li>
+          <li>No ad budget to fund: $0</li>
+          <li>No premixing labor: $0</li></ul>
+          <p class="total">You pay: from $127 total &mdash; and the second bottle is even cheaper</p></div>
+      </div>
+      <p class="fine">Illustrative breakdown based on typical DTC CBD cost structures. We can't verify any specific competitor's books &mdash; but you can verify our price.</p>
+    </div></section>
+
     <!-- VALUE LADDER -->
     <section class="ladder" id="pricing">
       <div class="container ladder-grid">
@@ -645,6 +684,17 @@ _bot: w48523-1787617871 | model: mistral/mistral-small-latest | tokens: 4268
         <div class="tier"><h3>Monthly Refill</h3><p class="tier-price">$107/mo</p><p>Auto-ships · cancel anytime · save 16%</p></div>
       </div>
     </section>
+
+    
+    <!-- HOW IT WORKS -->
+    <section class="how"><div class="container">
+      <h2>Three Steps. Two Minutes. Months of Tincture.</h2>
+      <div class="how-grid">
+        <div class="step"><span class="step-n">1</span><h3>Squeeze</h3><p>One measured ounce of concentrate &mdash; 10,000mg CBD, no guesswork, no droppers.</p></div>
+        <div class="step"><span class="step-n">2</span><h3>Pour</h3><p>Into any bottle you already own. Add your oil of choice &mdash; MCT is the classic.</p></div>
+        <div class="step"><span class="step-n">3</span><h3>Shake</h3><p>Warm water bath, shake, done. You just made what they charge $200 for.</p></div>
+      </div>
+    </div></section>
 
     <!-- COMPARISON -->
     <section class="compare"><div class="container">
