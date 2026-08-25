@@ -1,473 +1,890 @@
+# Write final, production-ready index.html with all real copy, dark green/cream palette, Inter font import, mobile-first responsive structure, and 18+ age gate badge
+_bot: w48523-1787617871 | model: mistral/mistral-small-latest | tokens: 4268
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CBD Squeeze-Pour Concentrate | Pure. Precise. Pet-Safe.</title>
-  <meta name="description" content="Premium CBD squeeze-pour concentrate for pet owners & DIY bulk users. Lab-tested, solvent-free, 5x more potent than retail tinctures. Ships in 24h. 18+ only.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
-  <style>
-    :root {
-      --primary: #2a5c3a;
-      --secondary: #4d8c63;
-      --accent: #ff6b35;
-      --light: #f8f9fa;
-      --dark: #1e3a29;
-      --gray: #6c757d;
-      --light-gray: #e9ecef;
-      --border: #dee2e6;
-      --success: #28a745;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
-      --transition: all 0.3s ease;
-      --radius: 8px;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfect Relief - Premium CBD Tincture for Pets</title>
+    <meta name="description" content="Veterinarian-formulated CBD tincture for dogs & cats. 10,000mg squeeze-pour bottle with 300 servings. 100% organic hemp extract. 30-day money-back guarantee.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: #1a3a3a;
+            --cream: #f5f1e8;
+            --accent-green: #4a6741;
+            --text-dark: #2d2d2d;
+            --text-light: #f5f1e8;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: var(--font-main);
-      line-height: 1.6;
-      color: #333;
-      background-color: #fff;
-      overflow-x: hidden;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    h1, h2, h3, h4 {
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-    p { margin-bottom: 1rem; }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+        /* Header & Navigation */
+        header {
+            background-color: var(--dark-green);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: var(--primary);
-      color: white;
-      border-radius: var(--radius);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: 0.875rem;
-      transition: var(--transition);
-      border: none;
-      cursor: pointer;
-      text-align: center;
-    }
+        .logo {
+            color: var(--text-light);
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-    .btn:hover { background: var(--secondary); transform: translateY(-2px); }
-    .btn-accent { background: var(--accent); }
-    .btn-accent:hover { background: #e05a29; }
-    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
-    .btn-outline:hover { background: var(--primary); color: white; }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
 
-    .text-center { text-align: center; }
-    .mt-1 { margin-top: 0.5rem; }
-    .mt-2 { margin-top: 1rem; }
-    .mt-4 { margin-top: 2rem; }
-    .mb-1 { margin-bottom: 0.5rem; }
-    .mb-2 { margin-bottom: 1rem; }
-    .mb-4 { margin-bottom: 2rem; }
-    .py-2 { padding: 1rem 0; }
-    .py-4 { padding: 2rem 0; }
-    .py-6 { padding: 3rem 0; }
-    .py-8 { padding: 4rem 0; }
-    .px-4 { padding: 0 1rem; }
-    .section { padding: 5rem 0; }
-    @media (max-width: 768px) {
-      .section { padding: 3rem 0; }
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.75rem; }
-      .btn { padding: 0.65rem 1.25rem; font-size: 0.8125rem; }
-    }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #f0f8f3 0%, #e6f7ed 100%);
-      position: relative;
-      overflow: hidden;
-      padding: 6rem 0;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .hero h1 {
-      color: var(--dark);
-      margin-bottom: 1.25rem;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--gray);
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-    .price-tag {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 0.5rem 1.25rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.5rem;
-      margin: 1rem 0;
-      box-shadow: 0 4px 12px rgba(255,107,53,0.25);
-    }
-    .price-original {
-      text-decoration: line-through;
-      opacity: 0.7;
-      font-size: 1.125rem;
-      margin-left: 0.5rem;
-    }
-    .badge-coa {
-      display: inline-flex;
-      align-items: center;
-      background: #e8f5e9;
-      color: #2e7d32;
-      padding: 0.25rem 0.75rem;
-      border-radius: 50px;
-      font-size: 0.8125rem;
-      margin-top: 1rem;
-      font-weight: 600;
-    }
-    .badge-coa svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
+        nav a:hover {
+            opacity: 0.8;
+        }
 
-    /* Sticky ATC Bar */
-    .sticky-atc {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      border-top: 1px solid var(--border);
-      transform: translateY(100%);
-      transition: transform 0.4s ease;
-    }
-    .sticky-atc.show {
-      transform: translateY(0);
-    }
-    .sticky-atc .price {
-      font-weight: 700;
-      color: var(--dark);
-      font-size: 1.25rem;
-    }
-    .sticky-atc .btn {
-      padding: 0.65rem 1.5rem;
-      font-size: 0.9375rem;
-      min-width: 140px;
-    }
+        .cart-icon {
+            position: relative;
+            color: var(--text-light);
+            font-size: 20px;
+        }
 
-    /* Social Proof */
-    .social-proof {
-      background-color: white;
-      padding: 4rem 0;
-    }
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .testimonial-card {
-      background: white;
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--accent);
-    }
-    .testimonial-card p {
-      font-style: italic;
-      margin-bottom: 1rem;
-      position: relative;
-    }
-    .testimonial-card p::before {
-      content: """;
-      font-size: 3rem;
-      position: absolute;
-      top: -15px;
-      left: -10px;
-      color: var(--light-gray);
-      font-family: serif;
-    }
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-    }
-    .author-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--light-gray);
-      margin-right: 0.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: var(--dark);
-    }
-    .author-info h4 { margin: 0; font-size: 1rem; }
-    .author-info p { margin: 0.25rem 0 0; font-size: 0.875rem; color: var(--gray); }
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--accent-green);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
 
-    /* How It Works */
-    .how-it-works {
-      background-color: #f8f9fa;
-      padding: 5rem 0;
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .step {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-    .step:hover { transform: translateY(-5px); }
-    .step-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin: 0 auto 1.5rem;
-    }
-    .step h3 { margin-bottom: 0.75rem; color: var(--dark); }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-green) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* Comparison Table */
-    .comparison {
-      background: white;
-      padding: 5rem 0;
-    }
-    .table-container {
-      overflow-x: auto;
-      margin-top: 2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-    }
-    th, td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    th {
-      background-color: var(--light);
-      font-weight: 700;
-      color: var(--dark);
-    }
-    tr:last-child td { border-bottom: none; }
-    .check { color: var(--success); }
-    .dash { color: #adb5bd; }
-    @media (max-width: 768px) {
-      th, td { padding: 0.75rem 0.5rem; }
-      table { font-size: 0.875rem; }
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 Q50,5 80,20 Q95,50 80,80 Q50,95 20,80 Q5,50 20,20" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: 200px 200px;
+        }
 
-    /* FAQ */
-    .faq {
-      background-color: #f8f9fa;
-      padding: 5rem 0;
-    }
-    .faq-item {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1.5rem;
-    }
-    .faq-question {
-      font-weight: 600;
-      font-size: 1.125rem;
-      color: var(--dark);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 0;
-    }
-    .faq-answer {
-      margin-top: 0.75rem;
-      padding-left: 1.5rem;
-      border-left: 2px solid var(--primary);
-    }
-    .faq-answer p { margin-bottom: 0.5rem; }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
 
-    /* Checkout */
-    .checkout {
-      background: white;
-      padding: 5rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .checkout::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0f8f3' fill-opacity='0.5'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-size: 60px 60px;
-      z-index: 0;
-    }
-    .checkout-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .payment-methods {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .payment-method {
-      flex: 1;
-      min-width: 120px;
-      text-align: center;
-      padding: 1.25rem;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: var(--transition);
-    }
-    .payment-method:hover {
-      border-color: var(--primary);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .payment-method img {
-      height: 40px;
-      margin-bottom: 0.75rem;
-      filter: grayscale(100%) contrast(0.8);
-    }
-    .payment-method.active img {
-      filter: none;
-      height: 44px;
-    }
-    .venmo, .zelle, .paypal {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .venmo { color: #3d95ce; }
-    .zelle { color: #007dc5; }
-    .paypal { color: #003087; }
-    .venmo:hover, .zelle:hover, .paypal:hover { color: var(--primary); }
-    .instructions {
-      background: #f8f9fa;
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-left: 4px solid var(--accent);
-    }
-    .instructions h3 { margin-top: 0; }
-    .order-form {
-      margin-top: 2rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--dark);
-    }
-    .form-control {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      font-family: var(--font-main);
-      font-size: 1rem;
-      transition: var(--transition);
-    }
-    .form-control:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(42, 92, 58, 0.1);
-    }
-    textarea.form-control { min-height: 120px; resize: vertical; }
+        .hero-badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--dark-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
 
-    /* Footer */
-    .footer {
-      background: var(--dark);
-      color: white;
-      padding: 2.5rem 0 1.5rem;
-      font-size: 0.875rem;
-    }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-    .footer-links a {
-      color: #a8d8b9;
-      text-decoration: none;
-    }
-    .footer-links a:hover { text-decoration: underline; }
-    .disclaimer {
-      font-size: 0.75rem;
-      opacity: 0.8;
-      margin-top: 2rem;
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #3a5633;
+            transform: translateY(-2px);
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 80px 0;
+            background-color: var(--cream);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+
+        .product-info p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent-green);
+            margin-bottom: 30px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .quantity-input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 80px 0;
+            background-color: var(--dark-green);
+            color: var(--text-light);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .comparison-table th {
+            background-color: rgba(255,255,255,0.1);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .checkmark {
+            color: #4ade80;
+            font-size: 1.2rem;
+        }
+
+        .xmark {
+            color: #f87171;
+            font-size: 1.2rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--cream);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 25px 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-top: 15px;
+            color: #555;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Age Gate */
+        .age-gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .age-gate-content {
+            background-color: var(--dark-green);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            color: var(--text-light);
+            max-width: 500px;
+        }
+
+        .age-gate h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .age-gate p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .age-gate-form {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .age-input {
+            width: 60px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .age-submit {
+            background-color: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .age-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent-green);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 100;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /* Sticky Add to Cart Bar */
+        .sticky-atc {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        }
+
+        .sticky-atc-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .sticky-atc-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .sticky-atc-button {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .sticky-atc-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+
+        /* Exit Intent Modal */
+        .exit-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .exit-modal.active {
+            display: flex;
+        }
+
+        .exit-content {
+            background-color: var(--cream);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+        }
+
+        .exit-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .exit-modal h3 {
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+
+        .exit-modal p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .exit-code {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .exit-cta {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Gate -->
+    <div class="age-gate" id="ageGate">
+        <div class="age-gate-content">
+            <h2>Age Verification</h2>
+            <p>You must be 18 or older to purchase this product.</p>
+            <form class="age-gate-form">
+                <input type="number" class="age-input" min="18" max="120" placeholder="Age" required>
+                <button type="submit" class="age-submit">Enter</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Age Badge -->
+    <div class="age-badge">18+</div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                
+    </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1>One Squeeze. Precise Doses. No Droppers.</h1>
+        <p class="sub">10,000mg of hemp-derived CBD in a squeeze-pour bottle — built for pet owners and DIY mixers who are tired of syringes and counting drops.</p>
+        <div class="price-row">
+          <span class="price-old">$159</span>
+          <span class="price">$127</span>
+          <span class="per-mg">$0.0127/mg — beats every retail tincture</span>
+        </div>
+        <a href="#checkout" class="btn btn-primary">Get My Bottle →</a>
+        <p class="micro">Free shipping · Batch CoA included · 18+</p>
+      </div>
+    </section>
+
+    <!-- VALUE LADDER -->
+    <section class="ladder" id="pricing">
+      <div class="container ladder-grid">
+        <div class="tier"><h3>Single Bottle</h3><p class="tier-price">$127</p><p>10,000mg · ~200 servings</p></div>
+        <div class="tier tier-best"><span class="badge">MOST POPULAR</span><h3>Double Pack</h3><p class="tier-price">$217</p><p>Two bottles · $54.25/bottle · save $37</p></div>
+        <div class="tier"><h3>Monthly Refill</h3><p class="tier-price">$107/mo</p><p>Auto-ships · cancel anytime · save 16%</p></div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="compare"><div class="container">
+      <h2>Why pay tincture prices?</h2>
+
+<table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Total MG</th>
+        <th>Bottle Size</th>
+        <th>Price per MG</th>
+        <th>Pet-Owner Benefit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Our Product (10,000mg Squeeze-Pour) -->
+      <tr class="our-product">
+        <td>
+          <strong>10,000mg Squeeze-Pour</strong><br>
+          <span class="hero-badge">HERO</span>
+        </td>
+        <td>10,000mg</td>
+        <td>30ml</td>
+        <td><span class="price-per-mg">$0.0127</span></td>
+        <td>Precise dosing syringe for pets + humans</td>
+      </tr>
+
+      <!-- Competitor 1: PureKana Natural CBD Oil -->
+      <tr class="competitor">
+        <td>
+          <strong>PureKana Natural CBD Oil</strong><br>
+          <span class="retail-badge">Retail</span>
+        </td>
+        <td>3,000mg</td>
+        <td>30ml</td>
+        <td>$0.0433</td>
+        <td>No pet-specific dosing</td>
+      </tr>
+
+      <!-- Competitor 2: cbdMD Premium Broad Spectrum -->
+      <tr class="competitor">
+        <td>
+          <strong>cbdMD Premium Broad Spectrum</strong><br>
+          <span class="retail-badge">Retail</span>
+        </td>
+        <td>3,000mg</td>
+        <td>60ml</td>
+        <td>$0.0350</td>
+        <td>Pet formula available (separate SKU)</td>
+      </tr>
+
+      <!-- Competitor 3: Lazarus Naturals High Potency -->
+      <tr class="competitor">
+        <td>
+          <strong>Lazarus Naturals High Potency</strong><br>
+          <span class="retail-badge">Retail</span>
+        </td>
+        <td>2,000mg</td>
+        <td>60ml</td>
+        <td>$0.0325</td>
+        <td>Pet tincture available (lower mg)</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          <p class="disclaimer">*Price per mg calculated from MSRP. Actual savings may vary.</p>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div></section>
+
+    <!-- CHECKOUT: GOOGLE PAY ONLY -->
+    <section class="checkout" id="checkout"><div class="container">
+      <h2>Checkout — Google Pay</h2>
+      <p>Tap the button, confirm with your fingerprint. That's it.</p>
+      <!-- Google Pay-Only Checkout Section (Stripe Payment Element v15) -->
+<section id="checkout" class="checkout-section py-12 px-4 md:px-6 max-w-4xl mx-auto">
+  <div class="bg-cream rounded-xl border border-green-100 p-6 md:p-8 shadow-sm">
+    <h2 class="text-2xl font-bold text-dark-green mb-2">Secure Checkout</h2>
+    <p class="text-green-800 mb-6">Google Pay only — fast, encrypted, and pet-parent trusted</p>
+
+    <!-- Stripe Elements Container -->
+    <div id="payment-element" class="mb-6"></div>
+
+    <!-- Google Pay Button -->
+    <div id="google-pay-button" class="mb-6"></div>
+
+    <!-- Error Display -->
+    <div id="payment-errors" role="alert" class="hidden bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm mb-6 font-medium"></div>
+
+    <!-- Terms & Compliance -->
+    <div class="text-xs text-green-700 space-y-1">
+      <p>✅ 100% encrypted via Stripe PCI Level 1</p>
+      <p>🔒 Google Pay tokenization — your card details never touch our servers</p>
+      <p class="pt-2 border-t border-green-100 mt-2">By completing purchase, you confirm you are 18+ and agree to our <a href="#terms" class="underline hover:no-underline">Terms</a> and <a href="#privacy" class="underline hover:no-underline">Privacy Policy</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Stripe JS -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+// Initialize Stripe with your publishable key (replace in prod)
+const stripe = Stripe('pk_live_51HwXYZ...'); // ← REPLACE WITH YOUR LIVE PK KEY
+
+// Initialize Elements
+const elements = stripe.elements({
+  clientSecret: 'client_secret_from_your_backend', // ← REPLACE WITH DYNAMIC SECRET (server-generated)
+  appearance: {
+    theme: 'flat',
+    variables: {
+      colorPrimary: '#1a5d38',
+      colorBackground: '#f9f7f3',
+      colorText: '#1a3a2a',
+      colorDanger: '#c12a2a',
+      spacingUnit: '4px',
+      borderRadius: '8px',
+      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      fontSizeBase: '16px'
+    },
+    rules: {
+      '.Label': {
+        fontWeight: '600',
+        fontSize: '14px',
+        color: '#1a3a2a'
+      },
+      '.Input': {
+        backgroundColor: '#ffffff',
+        borderColor: '#e0d9cf',
+        padding: '12px 14px',
+        borderRadius: '8px',
+        fontSize: '16px',
+        fontWeight: '400'
+      },
+      '.Input:focus': {
+        borderColor: '#1a5d38',
+        boxShadow: '0 0 0 3px rgba(26, 93, 56, 0.15)'
+      },
+      '.Input--invalid': {
+        borderColor: '#c12a2a
+    </div></section>
+
+<div id="exitModal" class="exit-modal" aria-hidden="true" tabindex="-1">
+  <div class="exit-modal-overlay" aria-hidden="true"></div>
+  <div class="exit-modal-content" role="dialog" aria-labelledby="exitModalTitle" aria-describedby="exitModalDesc">
+    <button type="button" class="exit-modal-close" aria-label="Close modal">&times;</button>
+    <h2 id="exitModalTitle" class="exit-modal-title">Wait — Your Pet Deserves Relief</h2>
+    <p id="exitModalDesc" class="exit-modal-body">Get <strong>10% off</strong> your first order with code:</p>
+    <div class="exit-modal-code-box">
+      <span class="exit-modal-code">PETRELIEF10</span>
+      <button type="button" class="exit-modal-copy-btn" aria-label="Copy discount code">Copy</button>
+    </div>
+    <p class="exit-modal-note">Code applied automatically at checkout. Expires in 15 minutes.</p>
+  </div>
+</div>
+
+<!-- Cart Timer Discount Banner (hidden by default, appears after 90s) -->
+<div id="cartTimerBanner" class="cart-timer-banner" aria-live="polite" aria-atomic="true">
+  <div class="cart-timer-inner">
+    <span class="cart-timer-icon">⏱️</span>
+    <span class="cart-timer-text"><strong>$12 OFF</strong> applied — your cart just saved!</span>
+  </div>
+</div>
+
+<!-- Sticky Add-to-Cart Bar -->
+<div id="stickyATCBar" class="sticky-atc-bar" role="region" aria-label="Quick add to cart">
+  <div class="sticky-atc-container">
+    <div class="sticky-atc-left">
+      <span class="sticky-atc-price">$127</span>
+      <span class="sticky-atc-label">10,000mg Squeeze-Pour Bottle</span>
+    </div>
+    <button id="stickyATCButton" class="sticky-atc-button" aria-label="Add 10,000mg bottle to cart">Add to Cart</button>
+  </div>
+</div>
 
 
-</style></body></html>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this CBD tincture safe for dogs and cats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our 10,000mg squeeze-pour bottle is formulated with broad-spectrum CBD derived from organic hemp, contains 0.0% THC, and is third-party tested for purity. Always introduce any new supplement gradually and consult your veterinarian before use, especially if your pet is on medication or has pre-existing conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast does the CBD take effect for my pet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most pets experience noticeable calming or comfort effects within 15–30 minutes when administered sublingually. Effects typically peak around 60 minutes and can last 4–6 hours. Start with one full squeeze (50mg CBD) and adjust based on your pet’s response."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this CBD tincture alongside my vet’s treatment plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CBD is generally compatible with most veterinary medications, but it may interact with sedatives, anti-inflammatories, or blood thinners. We recommend informing your veterinarian before combining CBD with any ongoing treatments to ensure safety and avoid potential interactions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What’s the best way to give this CBD to my pet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hold the bottle vertically and squeeze once to release 50mg of CBD oil directly into your pet’s mouth (under the tongue). Alternatively, mix it into their food or a treat. Avoid touching the dropper tip to your pet’s mouth to maintain hygiene."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know the dosage for my pet’s size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For small pets (under 20 lbs), start with ¼ squeeze (12.5mg). For medium pets (20–50 lbs), use ½ squeeze (25mg). For large pets (over 50 lbs), use 1 full squeeze (50mg). Monitor for 3–5 days and adjust as needed—our 10,000mg bottle contains 200 servings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this tincture lab-tested and what’s in it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Each batch undergoes rigorous third-party testing for potency, pesticides, heavy metals, and microbials. Our Certificate of Analysis (CoA) confirms 10,000mg CBD per bottle with 0.0% THC. Ingredients: organic MCT coconut oil, full-spectrum hemp extract, and natural terpenes."
+      }
+    }
+  ]
+}
+</script>
+<footer class="fda-footer">
+  <p class="fda-text">
+    <strong>These statements have not been evaluated by the FDA.</strong> This product is not intended to diagnose, treat, cure, or prevent any disease.
+  </p>
+</footer>
+
+</body>
+</html>
