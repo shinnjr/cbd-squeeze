@@ -47,3 +47,4 @@ RULES: swarm via waterfall (ox-alpha planning/copy, mid-tier code/art, worker bu
 ## HARD RULES
 - Free everything. No paid ads. Never half-ass. Concurrent execution, high urgency.
 - Verify every claim against live sources. Save progress to ledger + push to GitHub constantly.
+- GIT HYGIENE (Aug 25): before any push, run `ruff check --fix .` on the repo (CI enforces it; broken lint = red X on James's phone). Never push truncated/partial files.
