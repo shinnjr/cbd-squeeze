@@ -48,3 +48,11 @@ RULES: swarm via waterfall (ox-alpha planning/copy, mid-tier code/art, worker bu
 - Free everything. No paid ads. Never half-ass. Concurrent execution, high urgency.
 - Verify every claim against live sources. Save progress to ledger + push to GitHub constantly.
 - GIT HYGIENE (Aug 25): before any push, run `ruff check --fix .` on the repo (CI enforces it; broken lint = red X on James's phone). Never push truncated/partial files.
+
+
+## MARKETING/SOCIAL STANDARDS — 2026 (James directive)
+Audience-first, authentic, simple, relatable. Drive CTR + conversion, not vanity.
+- Hook in first 1.5s; native-feeling, NOT polished-ad look; real hands, real places.
+- Every video/post ends with one CTA to the live site (link in bio/pinned comment).
+- AI video pipeline: local ComfyUI Wan2.2 (coordinated with video chat — no duplicate work).
+- Review loop: bot UX findings land in swarm/ux-findings.md same-day (never Friday).
