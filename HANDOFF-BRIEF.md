@@ -7,6 +7,8 @@ You are operating James's Swarm OS (`~/projects/swarm`). Ledger = canonical stat
 Waterfall = model routing (11 providers). NEVER ask James to repeat decided things.
 
 ## DECIDED — DO NOT RE-LITIGATE
+- BRAND + DOMAIN: **Simple Tinctures** at www.simpletinctures.com (owned, Cloudflare DNS live).
+  NEVER treat the brand as undecided. Never invent names.
 - Product: large squeeze-pour concentrate bottles, ~10,000mg class. Target: 5 sales/day.
 - Price: $127 hero ($0.0127/mg), ladder $127/$217-double/$107-mo-sub. Anchor $159 strikethrough.
   Full rationale: ~/projects/swarm/artifacts/G5-T03.md
