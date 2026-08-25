@@ -115,7 +115,7 @@ footer a{color:var(--ink)}
     <div id="verdict"></div>
   </div>
 
-  <div id="afterReveal">
+  <a id="rcLink" class="quiet" href="/receipt.html" style="text-decoration:underline">Print your year-one receipt →</a><div id="afterReveal">
     <a class="buybtn" id="ctaA" data-st="cta_hero" data-label="savings-first" href="#calc">See your savings ↓</a>
     <a class="buybtn" id="ctaB" data-st="cta_hero" data-label="skip-to-buy" style="background:var(--green)" href="#buy">Skip — I'm in. $127 →</a>
     <span class="quiet">Google Pay · free ship · CoA in box</span>
@@ -170,6 +170,7 @@ B.forEach(function(b,i){
   el.addEventListener("click",function(){
     g.querySelectorAll(".band").forEach(function(x){x.classList.remove("on")});
     el.classList.add("on");
+    var rc=document.getElementById("rcLink"); if(rc) rc.href="/receipt.html?ppmg="+mid.toFixed(3);
     var mid=(b[1]+b[2])/2, cost=mid*MG, over=cost-OUR, pct=Math.round(over/OUR*100), yr=over*2.4; /* ~2.4 pouch-equivalents/yr at 40mg/day */
     document.getElementById("bName").innerHTML=b[0]+' vs us — <a href="/simple-tinctures-vs-'+b[3]+'-price-comparison.html" style="color:var(--amber)">full breakdown</a>';
     document.getElementById("bBand").textContent="$"+b[1].toFixed(2)+"–$"+b[2].toFixed(2)+"/mg";
