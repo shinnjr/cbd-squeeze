@@ -13,6 +13,14 @@
 
   var qty = 1, subscribed = false;
 
+  /* ---- ?plan= deep-link (v2 homepage funnels: single|double|sub) ---- */
+  try {
+    var plan = new URLSearchParams(location.search).get("plan");
+    if (plan === "double") { qty = 2; }
+    if (plan === "sub")    { subscribed = true; }
+  } catch (e) {}
+
+
   function tierUnit(q) { return q === 1 ? 127 : q === 2 ? 108.5 : 99; } // $127 / $217 double / multi-bottle
   function total() {
     if (subscribed) return 107 * qty; // $107/mo subscription per bottle
@@ -155,5 +163,12 @@
     });
   }
 
+  /* sync UI with deep-linked state */
+  try {
+    var sub = document.getElementById("subscribe");
+    if (sub) sub.checked = subscribed;
+    var pl = new URLSearchParams(location.search).get("plan");
+    if (pl === "double" && qMinus) { /* qty already 2; nothing visual beyond stepper */ }
+  } catch (e) {}
   render();
 })();
