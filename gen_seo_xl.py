@@ -138,7 +138,7 @@ def page_html(spec, related):
 <p>$127 &middot; 10,000mg squeeze-pour concentrate &middot; $0.0127/mg</p>
 <a class="btn" href="/index.html#checkout">Get My Bottle &rarr;</a>
 <p style="margin:14px 0 0;font-size:.85rem;opacity:.8;">Free shipping &middot; Batch CoA included &middot; 18+</p>
-</div></main>
+</div></div></main>
 <footer><div class="container">
 <div class="footer-links">{flinks}</div>
 {FDA_FOOTER}
