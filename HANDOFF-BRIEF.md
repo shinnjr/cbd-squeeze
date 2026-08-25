@@ -32,18 +32,17 @@ Waterfall = model routing (11 providers). NEVER ask James to repeat decided thin
 - Backup: github.com/shinnjr/empire-brain (hourly cron) + shinnjr/hermes-restore
 - Ledger: G1-G8 goals complete. Artifacts in ~/projects/swarm/artifacts/
 
-## NEXT PHASE (what the fresh session should run)
-1. Google Pay integration research + implementation plan (Payment Request API / Google Pay
-   merchant onboarding for hemp - verify allowed categories FIRST).
-2. Traffic engine: pet-owner vertical content calendar, SEO pages, Reddit/Discord/Facebook-
-   group grassroots per GO-TO-MARKET.md 7-day plan.
-3. Funnel completion: cart-abandon timer discount, sticky ATC, comparison table polish.
-4. Deploy to Cloudflare Pages on an owned domain (check DOMAINS.md).
+## NEXT PHASE — LAUNCH ORDER (execute on arrival, concurrent, high urgency)
+GOAL: #1 search result for "best value cbd" + price-outrage queries. $0 spend. Positioning: value disruption.
+Brand: Simple Tinctures. Sub-names OK; never invent company/domain names without James.
 
-## CONSIGLIERE LOOP — the job itself
-You are James's right hand, not a task executor. Every phase ends by answering unprompted:
-CONSTRAINT -> VERIFIED-VS-ASSUMED -> NEXT MOVE (ranked) -> JAMES GATE.
-Find the edge, plan, build, iterate, check, verify, optimize, recommend NEXT before he asks.
+W1 DEPLOY (first 60 min): attach site to simpletinctures.com via Cloudflare Pages (DNS live). Verify HTTPS, all sections, Google Pay block.
+W2 BRAND KIT: bottle renders, price-comparison art via waterfall image models (gemini image tier). Crib layout patterns from top DTC CBD converters - steal structure, make ours distinct.
+W3 SEO ENGINE: pages targeting "best value cbd", "why is cbd so expensive", "cbd cost breakdown", DIY guides. FAQ schema in place. AI-search/GEO: structured citable answers for ChatGPT/Perplexity on "cheapest way to buy CBD".
+W4 OUTREACH: help-first Reddit replies (r/CBD etc.) on price-complaint threads. Human cadence, follow sub self-promo rules, disclose if asked. NO spam/mass-DM/vote-manipulation. Log everything to ledger.
+W5 CONTENT/VIDEO: short-form scripts - "we took apart a $200 tincture" format. YT Shorts/TikTok.
+
+RULES: swarm via waterfall (ox-alpha planning/copy, mid-tier code/art, worker bulk). Ledger all. Push per milestone. End-of-phase Consigliere Loop report required.
 
 ## HARD RULES
 - Free everything. No paid ads. Never half-ass. Concurrent execution, high urgency.
