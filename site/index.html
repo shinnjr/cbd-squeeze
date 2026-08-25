@@ -1,937 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Tinctures — 10,000mg CBD Concentrate at $0.0127/mg | Best Value CBD</title>
-    <meta name="description" content="Stop paying for premixed. One 10,000mg squeeze-pour bottle for $127 — squeeze an oz of concentrate into your own bottle with your own MCT oil and make months of tinctures at the best CBD price per mg on the web. 0% THC, third-party lab tested.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-green: #1a3a3a;
-            --cream: #f5f1e8;
-            --accent-green: #4a6741;
-            --text-dark: #2d2d2d;
-            --text-light: #f5f1e8;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--dark-green);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: var(--text-light);
-            font-size: 24px;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        .cart-icon {
-            position: relative;
-            color: var(--text-light);
-            font-size: 20px;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: var(--accent-green);
-            color: white;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-green) 100%);
-            padding: 80px 0;
-            text-align: center;
-            color: var(--text-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 Q50,5 80,20 Q95,50 80,80 Q50,95 20,80 Q5,50 20,20" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: 200px 200px;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: var(--dark-green);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            background-color: var(--accent-green);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            background-color: #3a5633;
-            transform: translateY(-2px);
-        }
-
-        /* Product Section */
-        .product-section {
-            padding: 80px 0;
-            background-color: var(--cream);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .product-image {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .product-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--dark-green);
-        }
-
-        .product-info p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            color: #555;
-        }
-
-        .price {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--accent-green);
-            margin-bottom: 30px;
-        }
-
-        .price-old {
-            text-decoration: line-through;
-            color: #888;
-            font-size: 1.2rem;
-            margin-left: 10px;
-        }
-
-        .features {
-            list-style: none;
-            margin-bottom: 40px;
-        }
-
-        .features li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .features li::before {
-            content: '✓';
-            color: var(--accent-green);
-            font-weight: bold;
-            margin-right: 15px;
-            font-size: 1.2rem;
-        }
-
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .quantity-btn {
-            width: 40px;
-            height: 40px;
-            border: 1px solid #ddd;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .quantity-input {
-            width: 60px;
-            height: 40px;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-left: none;
-            border-right: none;
-        }
-
-        /* Comparison Table */
-        .comparison-section {
-            padding: 80px 0;
-            background-color: var(--dark-green);
-            color: var(--text-light);
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 40px;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 20px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .comparison-table th {
-            background-color: rgba(255,255,255,0.1);
-            font-weight: 600;
-        }
-
-        .comparison-table tr:hover {
-            background-color: rgba(255,255,255,0.05);
-        }
-
-        .checkmark {
-            color: #4ade80;
-            font-size: 1.2rem;
-        }
-
-        .xmark {
-            color: #f87171;
-            font-size: 1.2rem;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 0;
-            background-color: var(--cream);
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 25px 0;
-        }
-
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding-top: 15px;
-            color: #555;
-        }
-
-        .faq-answer.active {
-            max-height: 200px;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
-
-        /* Age Gate */
-        .age-gate {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .age-gate-content {
-            background-color: var(--dark-green);
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            color: var(--text-light);
-            max-width: 500px;
-        }
-
-        .age-gate h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .age-gate p {
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .age-gate-form {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .age-input {
-            width: 60px;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 1.1rem;
-        }
-
-        .age-submit {
-            background-color: var(--accent-green);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .age-badge {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--accent-green);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            z-index: 100;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-green);
-            color: var(--text-light);
-            padding: 40px 0 20px;
-            font-size: 0.9rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 20px;
-            text-align: center;
-            opacity: 0.7;
-        }
-
-        /* Sticky Add to Cart Bar */
-        .sticky-atc {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--dark-green);
-            color: var(--text-light);
-            padding: 15px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
-        }
-
-        .sticky-atc-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-
-        .sticky-atc-price {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .sticky-atc-button {
-            background-color: var(--accent-green);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .footer-links {
-                grid-template-columns: 1fr;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .sticky-atc-content {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-        }
-
-        /* Exit Intent Modal */
-        .exit-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            z-index: 3000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .exit-modal.active {
-            display: flex;
-        }
-
-        .exit-content {
-            background-color: var(--cream);
-            padding: 40px;
-            border-radius: 12px;
-            max-width: 500px;
-            text-align: center;
-            position: relative;
-        }
-
-        .exit-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #888;
-        }
-
-        .exit-modal h3 {
-            margin-bottom: 15px;
-            color: var(--dark-green);
-        }
-
-        .exit-modal p {
-            margin-bottom: 25px;
-            color: #555;
-        }
-
-        .exit-code {
-            background-color: var(--accent-green);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .exit-cta {
-            background-color: var(--accent-green);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-    
-    .reveal { padding: 4rem 0; }
-    .reveal-sub { color: #555; max-width: 640px; margin: 0 auto 2.5rem; }
-    .reveal-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; text-align: left; }
-    .cost-card { background:#fff; border:1px solid #e5e0d5; border-radius:12px; padding:1.75rem; box-shadow:0 2px 8px rgba(0,0,0,.05); }
-    .cost-card.highlight { border-color:var(--accent-green,#2a5c3a); border-width:2px; background:#f4faf5; }
-    .cost-card ul { list-style:none; padding:0; margin:0 0 1rem; }
-    .cost-card li { padding:.4rem 0; border-bottom:1px dashed #eee; font-size:.95rem; }
-    .cost-card .total { font-weight:700; font-size:1.1rem; margin:.5rem 0 0; color:var(--accent-green,#2a5c3a); }
-    .how { padding:4rem 0; background:#faf8f4; }
-    .how-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; margin-top:2rem; }
-    .step { background:#fff; border-radius:12px; padding:2rem 1.25rem; border:1px solid #e5e0d5; }
-    .step-n { display:inline-block; width:2.2rem; height:2.2rem; line-height:2.2rem; border-radius:50%; background:var(--dark-green,#1a3d2e); color:#fff; font-weight:700; margin-bottom:.75rem; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Tinctures — Make Your Own CBD Tincture, Save ~80%</title>
+<meta name="description" content="Simple Tinctures Concentrate is pure CBD isolate pre-dissolved in MCT oil. Pour, add your own oil, shake — make your own tincture for about a tenth of the price. Lab tested. Made in Colorado.">
+<link rel="canonical" href="https://www.simpletinctures.com/">
+<meta property="og:title" content="Simple Tinctures — Make Your Own CBD Tincture, Save ~80%">
+<meta property="og:description" content="Pure CBD isolate concentrate. Pour, add MCT oil, shake. A month of tinctures for about a tenth of the price.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/og.png">
+<meta property="og:url" content="https://www.simpletinctures.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Simple Tinctures","url":"https://www.simpletinctures.com/","logo":"https://www.simpletinctures.com/assets/favicon.svg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Simple Tinctures Concentrate","description":"Pure CBD isolate concentrate pre-dissolved in MCT oil. Make your own tincture.","brand":{"@type":"Brand","name":"Simple Tinctures"},"offers":{"@type":"Offer","price":"127.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.simpletinctures.com/order"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Simple Tinctures","url":"https://www.simpletinctures.com/"}
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4c29a6e0f2394b01898463010a85e6da"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-    <!-- Age Gate -->
-    <div class="age-gate" id="ageGate">
-        <div class="age-gate-content">
-            <h2>Age Verification</h2>
-            <p>You must be 18 or older to purchase this product.</p>
-            <form class="age-gate-form">
-                <input type="number" class="age-input" min="18" max="120" placeholder="Age" required>
-                <button type="submit" class="age-submit">Enter</button>
-            </form>
-        </div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1C4A34"/><path d="M32 12c8.5 9 13 15.4 13 23a13 13 0 0 1-26 0c0-7.6 4.5-14 13-23z" fill="#FBF8F2"/><circle cx="32" cy="35" r="4.2" fill="#C07A22"/></svg>
+      <span class="wordmark">Simple Tinctures<small>DIY CBD</small></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#math">The math</a>
+      <a href="#how">How it works</a>
+      <a href="/guide">Guide</a>
+      <a href="/cost-per-mg">Compare</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="/order">Get Concentrate</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Make your own · Save ~80%</span>
+      <h1>Why pay <span class="strike">$50</span> for a <span class="accent">$0.50</span> tincture?</h1>
+      <p class="lede">Simple Tinctures Concentrate is pure CBD isolate, pre-dissolved in MCT oil. Pour, add your own oil, shake — and make a month of tinctures for about a tenth of the price.</p>
+      <div class="value-strip">One <b>$127</b> bottle = 10 × 1,000&nbsp;mg tinctures &nbsp;·&nbsp; <b>$0.0127/mg</b> &nbsp;·&nbsp; save ~80% per mg &nbsp;·&nbsp; 18+ only</div>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/order">Get Concentrate — $127 <span class="was">$159</span> <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+      </div>
+      <ul class="hero-points">
+        <li>Pure CBD isolate — zero THC</li>
+        <li><a href="/lab-results">Third-party lab tested (CoA)</a></li>
+        <li>One bottle = ~10 full-strength tinctures</li>
+        <li>30-day money-back guarantee</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <div class="glow"></div>
+      <div class="bottle-wrap">
+        <img class="bottle" src="/assets/product-bottle.webp" alt="Simple Tinctures Concentrate — amber glass measure-and-pour bottle of pure CBD isolate">
+      </div>
+      <div class="float-card top">
+        <div class="f-label">You save</div>
+        <div class="f-val">~80%</div>
+      </div>
+      <div class="float-card bottom">
+        <div class="f-label">Cost per mg</div>
+        <div class="f-val">$0.006 <small>vs $0.05+</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trustbar">
+  <div class="wrap">
+    <div class="item"><span class="dot"></span> Made in Colorado</div>
+    <div class="item"><span class="dot"></span> Third-party lab tested</div>
+    <div class="item"><span class="dot"></span> Pure isolate · 0% THC</div>
+    <div class="item"><span class="dot"></span> 30-day money-back guarantee</div>
+  </div>
+</div>
+
+<section id="math">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">The math</span>
+      <h2>The markup you've been paying for.</h2>
+      <p>A 1,000&nbsp;mg store tincture is $40–$90. The CBD inside it costs about 50¢. You're paying for the label.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="card dim reveal">
+        <h3>The way you buy now</h3>
+        <div class="big">$40–$90 <span>/ bottle</span></div>
+        <div class="sub">1,000&nbsp;mg tincture, 30&nbsp;ml</div>
+        <ul>
+          <li>CBD inside: under $1</li>
+          <li>Rest is brand + packaging</li>
+          <li>Buy it again every month</li>
+        </ul>
+      </div>
+      <div class="card highlight reveal">
+        <h3>★ The Simple Tinctures way</h3>
+        <div class="big">$127 <span>/ one bottle</span></div>
+        <div class="sub">10,000&nbsp;mg concentrate — makes ~10 tinctures</div>
+        <ul>
+          <li>≈ $0.006 per mg</li>
+          <li>You add your own MCT oil</li>
+          <li>5 minutes, no lab, no guesswork</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Age Badge -->
-    <div class="age-badge">18+</div>
+    <table class="cmp">
+      <thead>
+        <tr><th>Option</th><th>Total CBD</th><th>Price</th><th>Cost per mg</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Store tincture</td><td>1,000 mg</td><td>$50–$90</td><td>$0.05–$0.09</td></tr>
+        <tr><td>Bulk isolate (raw)</td><td>1,000 mg</td><td>~$8</td><td>$0.008</td></tr>
+        <tr class="win"><td><strong>Simple Tinctures Concentrate</strong></td><td><strong>10,000 mg</strong></td><td><strong>$127</strong></td><td><strong>$0.0127/mg</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Simple&nbsp;Tinctures</a>
-                <nav><a href="#pricing">Pricing</a><a href="#checkout">Buy</a></nav>
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Your number</span>
+      <h2>See what you'd save.</h2>
+      <p>Plug in your habit. This is the difference between buying finished bottles and making your own.</p>
     </div>
+    <div class="calc">
+      <div class="calc-card">
+        <h3>Your current habit</h3>
+        <label for="bottles">Tincture bottles per month</label>
+        <input type="number" id="bottles" min="1" max="20" value="2">
+        <br><br>
+        <label for="price">What you pay per bottle ($)</label>
+        <input type="number" id="price" min="10" max="200" value="50">
       </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <h1>Stop Paying $60 for Oil You Could Buy for $8.</h1>
-        <p class="sub2">Premixed tinctures are mostly carrier oil. You're paying premium prices for someone to mix it and ship the water-weight to you.</p>
-        <p class="sub">Simple Tinctures sells you the concentrate only: one squeeze-and-measure oz, 10,000mg, into YOUR bottle with YOUR oil (MCT works great). Same finished tincture. A fraction of the price.</p>
-        <div class="price-row">
-          <span class="price-old">$159</span>
-          <span class="price">$127</span>
-          <span class="per-mg">$0.0127/mg — beats every retail tincture</span>
-        </div>
-        <a href="#checkout" class="btn btn-primary">Get My Bottle →</a>
-        <p class="micro">Free shipping · Batch CoA included · 18+</p>
+      <div class="calc-results">
+        <span class="label">Per year</span>
+        <div class="row">Store-bought: <b id="calc-store">—</b></div>
+        <div class="row">Simple Tinctures: <b id="calc-gd">—</b></div>
+        <div class="save" id="calc-save">$0 saved</div>
       </div>
-    </section>
-
-    
-    <!-- THE REVEAL: where your money actually goes -->
-    <section class="reveal"><div class="container">
-      <h2>Where Your Money Actually Goes</h2>
-      <p class="reveal-sub">A typical 10,000mg premixed tincture online costs $180&ndash;$240. Here's the honest math:</p>
-      <div class="reveal-grid">
-        <div class="cost-card"><h3>Typical Premixed Bottle</h3><ul>
-          <li>CBD concentrate: ~$25</li>
-          <li>Carrier oil (MCT/hemp seed): ~$8</li>
-          <li>Bottle, label, box: ~$4</li>
-          <li>Marketing &amp; ad spend: ~$80&ndash;$120</li>
-          <li>Shipping &amp; handling: ~$10</li>
-          <li>Their margin: the rest</li></ul>
-          <p class="total">You pay: ~$200</p></div>
-        <div class="cost-card highlight"><h3>Simple Tinctures Way</h3><ul>
-          <li>Our concentrate (10,000mg): $127 &rarr; or $54/bottle on the double</li>
-          <li>Your oil of choice: ~$8 at any grocery</li>
-          <li>Your bottle you already own: $0</li>
-          <li>No ad budget to fund: $0</li>
-          <li>No premixing labor: $0</li></ul>
-          <p class="total">You pay: from $127 total &mdash; and the second bottle is even cheaper</p></div>
-      </div>
-      <p class="fine">Illustrative breakdown based on typical DTC CBD cost structures. We can't verify any specific competitor's books &mdash; but you can verify our price.</p>
-    </div></section>
-
-    <!-- VALUE LADDER -->
-    <section class="ladder" id="pricing">
-      <div class="container ladder-grid">
-        <div class="tier"><h3>Single Bottle</h3><p class="tier-price">$127</p><p>10,000mg · ~200 servings</p></div>
-        <div class="tier tier-best"><span class="badge">MOST POPULAR</span><h3>Double Pack</h3><p class="tier-price">$217</p><p>Two bottles · $54.25/bottle · save $37</p></div>
-        <div class="tier"><h3>Monthly Refill</h3><p class="tier-price">$107/mo</p><p>Auto-ships · cancel anytime · save 16%</p></div>
-      </div>
-    </section>
-
-    
-    <!-- HOW IT WORKS -->
-    <section class="how"><div class="container">
-      <h2>Three Steps. Two Minutes. Months of Tincture.</h2>
-      <div class="how-grid">
-        <div class="step"><span class="step-n">1</span><h3>Squeeze</h3><p>One measured ounce of concentrate &mdash; 10,000mg CBD, no guesswork, no droppers.</p></div>
-        <div class="step"><span class="step-n">2</span><h3>Pour</h3><p>Into any bottle you already own. Add your oil of choice &mdash; MCT is the classic.</p></div>
-        <div class="step"><span class="step-n">3</span><h3>Shake</h3><p>Warm water bath, shake, done. You just made what they charge $200 for.</p></div>
-      </div>
-    </div></section>
-
-    <!-- COMPARISON -->
-    <section class="compare"><div class="container">
-      <h2>Why pay tincture prices?</h2>
-
-<table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Total MG</th>
-        <th>Bottle Size</th>
-        <th>Price per MG</th>
-        <th>Pet-Owner Benefit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Our Product (10,000mg Squeeze-Pour) -->
-      <tr class="our-product">
-        <td>
-          <strong>10,000mg Squeeze-Pour</strong><br>
-          <span class="hero-badge">HERO</span>
-        </td>
-        <td>10,000mg</td>
-        <td>30ml</td>
-        <td><span class="price-per-mg">$0.0127</span></td>
-        <td>Precise dosing syringe for pets + humans</td>
-      </tr>
-
-      <!-- Competitor 1: PureKana Natural CBD Oil -->
-      <tr class="competitor">
-        <td>
-          <strong>PureKana Natural CBD Oil</strong><br>
-          <span class="retail-badge">Retail</span>
-        </td>
-        <td>3,000mg</td>
-        <td>30ml</td>
-        <td>$0.0433</td>
-        <td>No pet-specific dosing</td>
-      </tr>
-
-      <!-- Competitor 2: cbdMD Premium Broad Spectrum -->
-      <tr class="competitor">
-        <td>
-          <strong>cbdMD Premium Broad Spectrum</strong><br>
-          <span class="retail-badge">Retail</span>
-        </td>
-        <td>3,000mg</td>
-        <td>60ml</td>
-        <td>$0.0350</td>
-        <td>Pet formula available (separate SKU)</td>
-      </tr>
-
-      <!-- Competitor 3: Lazarus Naturals High Potency -->
-      <tr class="competitor">
-        <td>
-          <strong>Lazarus Naturals High Potency</strong><br>
-          <span class="retail-badge">Retail</span>
-        </td>
-        <td>2,000mg</td>
-        <td>60ml</td>
-        <td>$0.0325</td>
-        <td>Pet tincture available (lower mg)</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="5">
-          <p class="disclaimer">*Price per mg calculated from MSRP. Actual savings may vary.</p>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
-</div></section>
-
-    <!-- CHECKOUT: GOOGLE PAY ONLY -->
-    <section class="checkout" id="checkout"><div class="container">
-      <h2>Checkout — Google Pay</h2>
-      <p>Tap the button, confirm with your fingerprint. That's it.</p>
-      <!-- Google Pay-Only Checkout Section (Stripe Payment Element v15) -->
-<section id="checkout" class="checkout-section py-12 px-4 md:px-6 max-w-4xl mx-auto">
-  <div class="bg-cream rounded-xl border border-green-100 p-6 md:p-8 shadow-sm">
-    <h2 class="text-2xl font-bold text-dark-green mb-2">Secure Checkout</h2>
-    <p class="text-green-800 mb-6">Google Pay only — fast, encrypted, and pet-parent trusted</p>
-
-    <!-- Stripe Elements Container -->
-    <div id="payment-element" class="mb-6"></div>
-
-    <!-- Google Pay Button -->
-    <div id="google-pay-button" class="mb-6"></div>
-
-    <!-- Error Display -->
-    <div id="payment-errors" role="alert" class="hidden bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm mb-6 font-medium"></div>
-
-    <!-- Terms & Compliance -->
-    <div class="text-xs text-green-700 space-y-1">
-      <p>✅ 100% encrypted via Stripe PCI Level 1</p>
-      <p>🔒 Google Pay tokenization — your card details never touch our servers</p>
-      <p class="pt-2 border-t border-green-100 mt-2">By completing purchase, you confirm you are 18+ and agree to our <a href="#terms" class="underline hover:no-underline">Terms</a> and <a href="#privacy" class="underline hover:no-underline">Privacy Policy</a>.</p>
     </div>
   </div>
 </section>
 
-<!-- Stripe JS -->
-<script src="https://js.stripe.com/v3/"></script>
-
-<script>
-// Initialize Stripe with your publishable key (replace in prod)
-const stripe = Stripe('pk_live_51HwXYZ...'); // ← REPLACE WITH YOUR LIVE PK KEY
-
-// Initialize Elements
-const elements = stripe.elements({
-  clientSecret: 'client_secret_from_your_backend', // ← REPLACE WITH DYNAMIC SECRET (server-generated)
-  appearance: {
-    theme: 'flat',
-    variables: {
-      colorPrimary: '#1a5d38',
-      colorBackground: '#f9f7f3',
-      colorText: '#1a3a2a',
-      colorDanger: '#c12a2a',
-      spacingUnit: '4px',
-      borderRadius: '8px',
-      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-      fontSizeBase: '16px'
-    },
-    rules: {
-      '.Label': {
-        fontWeight: '600',
-        fontSize: '14px',
-        color: '#1a3a2a'
-      },
-      '.Input': {
-        backgroundColor: '#ffffff',
-        borderColor: '#e0d9cf',
-        padding: '12px 14px',
-        borderRadius: '8px',
-        fontSize: '16px',
-        fontWeight: '400'
-      },
-      '.Input:focus': {
-        borderColor: '#1a5d38',
-        boxShadow: '0 0 0 3px rgba(26, 93, 56, 0.15)'
-      },
-      '.Input--invalid': {
-        borderColor: '#c12a2a
-    </div></section>
-
-<div id="exitModal" class="exit-modal" aria-hidden="true" tabindex="-1">
-  <div class="exit-modal-overlay" aria-hidden="true"></div>
-  <div class="exit-modal-content" role="dialog" aria-labelledby="exitModalTitle" aria-describedby="exitModalDesc">
-    <button type="button" class="exit-modal-close" aria-label="Close modal">&times;</button>
-    <h2 id="exitModalTitle" class="exit-modal-title">Wait — Your Pet Deserves Relief</h2>
-    <p id="exitModalDesc" class="exit-modal-body">Get <strong>10% off</strong> your first order with code:</p>
-    <div class="exit-modal-code-box">
-      <span class="exit-modal-code">PETRELIEF10</span>
-      <button type="button" class="exit-modal-copy-btn" aria-label="Copy discount code">Copy</button>
+<section id="offer">
+  <div class="wrap offer-grid">
+    <div>
+      <span class="kicker">The product</span>
+      <h2 style="font-size:clamp(1.9rem,4vw,2.6rem)">Simple Tinctures Concentrate</h2>
+      <p style="color:var(--muted)">10,000&nbsp;mg of pure CBD isolate, pre-dissolved in MCT oil, in a measure-and-pour bottle. No powder, no scale, no math — the bottle measures each pour for you.</p>
+      <ul class="hero-points" style="margin-bottom:1.4rem">
+        <li>Measure-and-pour bottle — one squeeze, one measured dose</li>
+        <li>Recipe card with exact measurements</li>
+        <li>Pure isolate, 0% THC, third-party tested</li>
+      </ul>
+      <div class="pill">Subscribe &amp; save on refills → $107/mo</div>
+      <div class="price">$127 <span class="was">$159</span></div>
+      <div class="tiers"><span class="tier">1 bottle <b>$127</b></span><span class="tier hot">2 bottles <b>$217</b> · most popular</span><span class="tier">Subscribe <b>$107/mo</b></span></div>
+      <div class="price-note">vs. buying ~8 finished tinctures at retail. Small-batch · Made in Colorado · Ships in 1–2 business days.</div>
+      <div style="margin-top:1.4rem; display:flex; gap:.8rem; flex-wrap:wrap">
+        <a class="btn btn-primary btn-lg" href="/order">Get Concentrate</a>
+        <a class="btn btn-ghost btn-lg" href="/lab-results">See the lab report</a>
+      </div>
     </div>
-    <p class="exit-modal-note">Code applied automatically at checkout. Expires in 15 minutes.</p>
-  </div>
-</div>
-
-<!-- Cart Timer Discount Banner (hidden by default, appears after 90s) -->
-<div id="cartTimerBanner" class="cart-timer-banner" aria-live="polite" aria-atomic="true">
-  <div class="cart-timer-inner">
-    <span class="cart-timer-icon">⏱️</span>
-    <span class="cart-timer-text"><strong>$12 OFF</strong> applied — your cart just saved!</span>
-  </div>
-</div>
-
-<!-- Sticky Add-to-Cart Bar -->
-<div id="stickyATCBar" class="sticky-atc-bar" role="region" aria-label="Quick add to cart">
-  <div class="sticky-atc-container">
-    <div class="sticky-atc-left">
-      <span class="sticky-atc-price">$127</span>
-      <span class="sticky-atc-label">10,000mg Squeeze-Pour Bottle</span>
+    <div class="card" style="text-align:center">
+      <div style="font-family:var(--font-display); font-size:1.6rem; font-weight:600; margin-bottom:.4rem">What's in the box</div>
+      <div style="color:var(--muted); font-size:15px; line-height:1.7">
+        10,000 mg concentrate<br>Measure-and-pour bottle<br>Recipe card
+      </div>
+      <div style="border-top:1px solid var(--line); margin-top:1.2rem; padding-top:1.2rem; color:var(--muted); font-size:14px">
+        <strong style="color:var(--ink)">You supply:</strong> MCT oil (~$10/L) + empty dropper bottles
+      </div>
     </div>
-    <button id="stickyATCButton" class="sticky-atc-button" aria-label="Add 10,000mg bottle to cart">Add to Cart</button>
   </div>
-</div>
+</section>
 
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">How it works</span>
+      <h2>Two minutes, three steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Squeeze &amp; pour</h3><p>Fill the bottle's top chamber to the line — that's one measured pour (1,000&nbsp;mg).</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Add MCT oil</h3><p>Pour the concentrate into your bottle and top it up with your own MCT oil.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Shake &amp; use</h3><p>Shake to mix. That's a full-strength tincture — at a fraction of the price.</p></div>
+    </div>
+    <p style="text-align:center; margin-top:2rem"><a class="btn btn-ghost" href="/guide">Read the full how-to guide →</a></p>
+  </div>
+</section>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this CBD tincture safe for dogs and cats?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Our 10,000mg squeeze-pour bottle is formulated with broad-spectrum CBD derived from organic hemp, contains 0.0% THC, and is third-party tested for purity. Always introduce any new supplement gradually and consult your veterinarian before use, especially if your pet is on medication or has pre-existing conditions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast does the CBD take effect for my pet?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most pets experience noticeable calming or comfort effects within 15–30 minutes when administered sublingually. Effects typically peak around 60 minutes and can last 4–6 hours. Start with one full squeeze (50mg CBD) and adjust based on your pet’s response."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use this CBD tincture alongside my vet’s treatment plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. CBD is generally compatible with most veterinary medications, but it may interact with sedatives, anti-inflammatories, or blood thinners. We recommend informing your veterinarian before combining CBD with any ongoing treatments to ensure safety and avoid potential interactions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What’s the best way to give this CBD to my pet?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Hold the bottle vertically and squeeze once to release 50mg of CBD oil directly into your pet’s mouth (under the tongue). Alternatively, mix it into their food or a treat. Avoid touching the dropper tip to your pet’s mouth to maintain hygiene."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I know the dosage for my pet’s size?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For small pets (under 20 lbs), start with ¼ squeeze (12.5mg). For medium pets (20–50 lbs), use ½ squeeze (25mg). For large pets (over 50 lbs), use 1 full squeeze (50mg). Monitor for 3–5 days and adjust as needed—our 10,000mg bottle contains 200 servings."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this tincture lab-tested and what’s in it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. Each batch undergoes rigorous third-party testing for potency, pesticides, heavy metals, and microbials. Our Certificate of Analysis (CoA) confirms 10,000mg CBD per bottle with 0.0% THC. Ingredients: organic MCT coconut oil, full-spectrum hemp extract, and natural terpenes."
-      }
-    }
-  ]
-}
-</script>
-<footer class="fda-footer">
-  <p class="fda-text">
-    <strong>These statements have not been evaluated by the FDA.</strong> This product is not intended to diagnose, treat, cure, or prevent any disease.
-  </p>
+<section id="stories">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Why we started</span>
+      <h2>We got tired of the markup too.</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="txt">"The bottles cost more than our groceries. So we made our own — and realized everyone should be able to."</div>
+        <div class="who">James, founder <span>· Denver, CO</span></div>
+      </div>
+      <div class="quote reveal cta-quote">
+        <div class="txt">First bottles are shipping now. <a href="mailto:orders@simpletinctures.com">Share your first tincture</a> and we'll publish it verbatim — your words, not ours.</div>
+        <div class="who">Your review <span>· posted unedited</span></div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:var(--muted); margin-top:1.4rem">Reviews reflect individual experiences and are not a substitute for medical advice, are not guaranteed, and may not be typical.</p>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Questions people actually ask.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq" open><summary>Is this really that simple?</summary><div class="faq-body">Yes. The isolate is already dissolved in MCT oil at a known strength. You pour a measured amount, add your own MCT oil, and shake. No scale, no powder, no heating.</div></details>
+      <details class="faq"><summary>How much do I actually save?</summary><div class="faq-body">A 1,000&nbsp;mg tincture runs $40–$90 at retail. The same CBD from Simple Tinctures Concentrate costs about $6 in material. Most people save 80%+ over the year.</div></details>
+      <details class="faq"><summary>Does it contain THC?</summary><div class="faq-body">No. It's pure CBD isolate — CBD with the other hemp compounds removed. Third-party lab tested at 0% THC (undetectable, well under 0.3%).</div></details>
+      <details class="faq"><summary>What do I need to buy besides the concentrate?</summary><div class="faq-body">MCT oil (about $10 a liter on Amazon) and empty dropper bottles if you don't already have them. That's it.</div></details>
+      <details class="faq"><summary>Can I use it for my pets?</summary><div class="faq-body">People do, but CBD is not approved for animals, so we can't recommend or dose for them. Always talk to your veterinarian first.</div></details>
+      <details class="faq"><summary>How long does a bottle last?</summary><div class="faq-body">10,000&nbsp;mg makes about ten 1,000&nbsp;mg tinctures. At one tincture a month, that's most of a year.</div></details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="capture">
+      <h2>Free dosing guide + $10 off your first order.</h2>
+      <p>Straightforward dosing, recipes, and the savings math — in one page. No spam, unsubscribe anytime.</p>
+      <form class="capture-form" id="captureForm">
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" id="email" placeholder="you@email.com" required>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAERUPVywMhFoAxJN" data-action="subscribe"></div>
+        <button class="btn btn-primary" type="submit">Send it to me</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Make your own. Keep your money.</h2>
+    <p class="lede">One bottle of concentrate, eight tinctures' worth, about a tenth of the price.</p>
+    <a class="btn btn-ink btn-lg" href="/order">Get Concentrate — $127</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:19px; margin-bottom:.8rem">Simple Tinctures</div>
+        <p style="color:rgba(255,255,255,.55)">Pure CBD isolate concentrate. Make your own tincture and keep your money.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <a href="/guide">How-to guide</a>
+        <a href="/cost-per-mg">Cost per mg</a>
+        <a href="/best-way-to-buy">Best way to buy CBD</a>
+        <a href="/dosing">Dosing</a>
+        <a href="/best-value-cbd.html">Best value CBD</a>
+        <a href="/why-is-cbd-so-expensive.html">Why is CBD so expensive</a>
+        <a href="/cbd-cost-breakdown.html">CBD cost breakdown</a>
+        <a href="/cheapest-way-to-buy-cbd.html">Cheapest way to buy CBD</a>
+        <a href="/diy-cbd-tincture-guide.html">DIY tincture guide</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/order">Order</a>
+        <a href="/lab-results">Lab results</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <p class="fine">DISCLAIMER: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. All products contain less than 0.3% THC (undetectable — CBD isolate). Always consult your physician before use, and your veterinarian before giving any product to an animal. Keep out of reach of children. Do not use if pregnant or nursing. © <span data-year>2026</span> Simple Tinctures.</p>
+  </div>
 </footer>
 
+<script src="/js/main.js"></script>
+
+<div class="sticky-buy">
+  <div class="sticky-inner wrap">
+    <div class="sticky-price">$127 <span>10,000 mg · $0.0127/mg</span></div>
+    <a class="btn btn-primary" href="/order">Get Concentrate →</a>
+  </div>
+</div>
+
+<!-- Exit-intent offer -->
+<div id="exitModal" hidden style="position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;display:flex;align-items:center;justify-content:center;padding:1rem">
+  <div role="dialog" aria-modal="true" aria-label="Before you go" style="background:#fff;border-radius:16px;max-width:420px;width:100%;padding:2rem;text-align:center">
+    <button id="exitClose" aria-label="Close" style="float:right;background:none;border:none;font-size:1.4rem;cursor:pointer">&times;</button>
+    <h3 style="margin:0 0 .5rem">Wait — do the math first.</h3>
+    <p style="color:#444;margin:0 0 1rem">A store tincture costs $40–90 for $0.50 worth of CBD. Our 10,000&nbsp;mg concentrate is <b>$127</b> — about ten full-strength tinctures' worth at <b>$0.0127/mg</b>.</p>
+    <a class="btn btn-primary btn-lg" href="/order" onclick="document.getElementById('exitModal').hidden=true">See the bottle — $127</a>
+    <p style="font-size:.78rem;color:#888;margin:.75rem 0 0">18+ only. No medical claims — see FDA disclaimer below.</p>
+  </div>
+</div>
+<script>
+(function () {
+  var m = document.getElementById("exitModal");
+  if (!m) return;
+  if (sessionStorage.getItem("exitShown")) return;
+  document.addEventListener("mouseout", function (e) {
+    if (!e.relatedTarget && e.clientY <= 0 && m.hidden && !sessionStorage.getItem("exitShown")) {
+      m.hidden = false; sessionStorage.setItem("exitShown", "1");
+    }
+  });
+  document.getElementById("exitClose").addEventListener("click", function () { m.hidden = true; });
+  m.addEventListener("click", function (e) { if (e.target === m) m.hidden = true; });
+})();
+</script>
 </body>
 </html>

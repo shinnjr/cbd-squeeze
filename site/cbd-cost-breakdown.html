@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBD Cost Breakdown: Where Every Dollar of Your Tincture Goes | Simple Tinctures</title>
+<meta name="description" content="Line-by-line cost breakdown of a typical $200 CBD tincture vs. the concentrate-only model at $0.0127/mg. Interactive-style cost table with honest per-mg math.">
+<link rel="canonical" href="https://www.simpletinctures.com/cbd-cost-breakdown.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CBD Cost Breakdown: Where Every Dollar of Your Tincture Goes | Simple Tinctures">
+<meta property="og:description" content="Line-by-line cost breakdown of a typical $200 CBD tincture vs. the concentrate-only model at $0.0127/mg. Interactive-style cost table with honest per-mg math.">
+<meta property="og:url" content="https://www.simpletinctures.com/cbd-cost-breakdown.html">
+<meta property="og:site_name" content="Simple Tinctures">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CBD Cost Breakdown: Where Every Dollar of Your Tincture Goes | Simple Tinctures">
+<meta name="twitter:description" content="Line-by-line cost breakdown of a typical $200 CBD tincture vs. the concentrate-only model at $0.0127/mg. Interactive-style cost table with honest per-mg math.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --dark-green:#1a3a3a; --cream:#f5f1e8; --accent-green:#4a6741; --text-dark:#2d2d2d; --text-light:#f5f1e8; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text-dark);line-height:1.6;overflow-x:hidden;}
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+header{background-color:var(--dark-green);padding:15px 0;position:sticky;top:0;z-index:1000;}
+.header-content{display:flex;justify-content:space-between;align-items:center;}
+.logo{color:var(--text-light);font-size:24px;font-weight:700;text-decoration:none;}
+nav a{color:var(--text-light);text-decoration:none;font-weight:500;margin-left:30px;transition:opacity .3s;}
+nav a:hover{opacity:.8;}
+.hero{background:linear-gradient(135deg,var(--dark-green) 0%,var(--accent-green) 100%);padding:64px 0;text-align:center;color:var(--text-light);}
+.hero h1{font-size:2.6rem;line-height:1.2;margin-bottom:16px;}
+.hero p{font-size:1.15rem;max-width:700px;margin:0 auto 24px;opacity:.95;}
+.btn{background-color:var(--accent-green);color:#fff;padding:15px 30px;border-radius:8px;font-size:1.05rem;font-weight:600;text-decoration:none;display:inline-block;border:none;cursor:pointer;}
+.btn:hover{background-color:#3a5633;transform:translateY(-2px);}
+main{padding:56px 0;}
+h2{color:var(--dark-green);font-size:1.9rem;margin:2.2rem 0 .9rem;}
+h3{color:var(--dark-green);font-size:1.25rem;margin:1.6rem 0 .5rem;}
+p{margin-bottom:1rem;}
+ul,ol{margin:0 0 1.2rem 1.4rem;}
+li{margin-bottom:.45rem;}
+.answer-box{background:#fff;border:2px solid var(--accent-green);border-left-width:10px;border-radius:12px;padding:24px 28px;margin:28px 0;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+.answer-box p:last-child{margin-bottom:0;}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.stat-card{background:#fff;border:1px solid #e5e0d5;border-radius:12px;padding:1.25rem;text-align:center;}
+.stat-num{font-size:1.7rem;font-weight:700;color:var(--accent-green);}
+.stat-label{font-size:.85rem;color:#666;}
+table.data{width:100%;border-collapse:collapse;margin:1.5rem 0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+table.data th,table.data td{padding:14px 16px;text-align:left;border-bottom:1px solid #eee;}
+table.data th{background:var(--dark-green);color:var(--text-light);font-weight:600;}
+table.data tr:hover td{background:rgba(74,103,65,.06);}
+tr.hl td{background:#f4faf5;font-weight:600;}
+.step{display:flex;gap:1rem;margin-bottom:1.4rem;background:#fff;border:1px solid #e5e0d5;border-radius:12px;padding:1.25rem 1.5rem;}
+.step-n{flex:0 0 auto;width:2.2rem;height:2.2rem;line-height:2.2rem;border-radius:50%;background:var(--dark-green);color:#fff;font-weight:700;text-align:center;}
+.faq-item{border-bottom:1px solid #ddd;padding:20px 0;}
+.faq-q{font-weight:600;font-size:1.08rem;color:var(--dark-green);}
+.faq-a{margin-top:.5rem;color:#555;}
+.cta-band{background:var(--dark-green);color:var(--text-light);text-align:center;padding:48px 20px;border-radius:14px;margin:2.5rem 0;}
+.cta-band .price-line{font-size:1.35rem;font-weight:700;margin:.5rem 0 1.2rem;}
+.age-badge{position:fixed;bottom:20px;right:20px;background:var(--accent-green);color:#fff;padding:8px 12px;border-radius:6px;font-size:12px;font-weight:600;z-index:100;}
+footer{background-color:var(--dark-green);color:var(--text-light);padding:40px 0 20px;font-size:.9rem;margin-top:40px;}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:22px;}
+.footer-links a{color:var(--text-light);opacity:.85;text-decoration:none;}
+.footer-links a:hover{opacity:1;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.2);padding-top:18px;text-align:center;opacity:.75;}
+@media(max-width:768px){.hero h1{font-size:1.9rem;} nav a{margin-left:16px;} table.data{font-size:.85rem;display:block;overflow-x:auto;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://www.simpletinctures.com/cbd-cost-breakdown.html", "name": "CBD Cost Breakdown: Where Every Dollar of Your Tincture Goes | Simple Tinctures", "description": "Line-by-line cost breakdown of a typical $200 CBD tincture vs. the concentrate-only model at $0.0127/mg. Interactive-style cost table with honest per-mg math.", "isPartOf": {"@type": "WebSite", "name": "Simple Tinctures", "url": "https://www.simpletinctures.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does CBD oil actually cost to make?", "acceptedAnswer": {"@type": "Answer", "text": "Published industry breakdowns suggest the CBD extract in a 10,000mg-class bottle represents roughly $25 of raw input, with carrier oil (~$8), packaging (~$6), and testing/compliance adding modest amounts. Marketing and customer acquisition \u2014 often $80\u2013$120 per order for DTC brands \u2014 typically dwarfs the ingredient cost and drives most of the retail markup."}}, {"@type": "Question", "name": "How do I calculate cost per mg of CBD?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the product's price by its total milligrams of CBD. Example: $127 \u00f7 10,000mg = $0.0127/mg. If a batch certificate of analysis is available, divide by the measured Total CBD on the CoA instead of the label claim."}}, {"@type": "Question", "name": "What is a good price per mg for CBD oil?", "acceptedAnswer": {"@type": "Answer", "text": "Independent price trackers grade anything under about $0.077/mg as bargain, $0.077\u2013$0.167 as market average, and above $0.167 as pricey. Typical retail tinctures land between $0.03 and $0.12 per mg."}}, {"@type": "Question", "name": "Is the Simple Tinctures cost table verifiable?", "acceptedAnswer": {"@type": "Answer", "text": "Our side is: $127 divided by 10,000mg is $0.0127 per mg, confirmed by batch certificate of analysis shipped with every bottle. The competitor column is clearly labeled illustrative \u2014 we don't audit competitors' books."}}]}</script>
+</head>
+<body>
+<header><div class="container"><div class="header-content">
+<a href="/index.html" class="logo">Simple&nbsp;Tinctures</a>
+<nav><a href="/best-value-cbd.html">Value Guide</a><a href="/faq.html">FAQ</a><a href="/index.html#checkout">Buy</a></nav>
+</div></div></header>
+<div class="hero"><div class="container"><h1>CBD Cost Breakdown: Every Dollar, Accounted For</h1>
+<p>What a $200 premixed bottle actually pays for &mdash; and what happens to the math when you remove the parts you don't need.</p></div></div>
+<main class="container">
+<div class="answer-box">
+<p><strong>In a typical ~$200 premixed 10,000mg-class tincture, the CBD extract accounts for only about $25.</strong> The rest is carrier oil (~$8), packaging and shipping (~$14), embedded production/testing costs, and &mdash; the biggest line &mdash; $80&ndash;$120 of marketing and customer acquisition. Buying concentrate only cuts the finished price to $127 per 10,000mg (<strong>$0.0127/mg</strong>) plus your own ~$8 oil.</p>
+</div>
+
+<h2>The Cost Table: Premixed vs. Concentrate-Only</h2>
+<table class="data">
+<thead><tr><th>Line item</th><th>Typical premixed bottle (~$200)</th><th>Simple Tinctures way</th></tr></thead>
+<tbody>
+<tr><td>CBD extract (10,000mg)</td><td>~$25</td><td>$127 <em>(that's all we sell &mdash; and it includes our margin, testing, and fulfillment)</em></td></tr>
+<tr><td>Carrier oil (MCT)</td><td>~$8 (marked up inside the price)</td><td>~$8 &mdash; you buy it once at any grocery store</td></tr>
+<tr><td>Bottle, dropper, label, box</td><td>~$6</td><td>$0 &mdash; reuse a bottle you own</td></tr>
+<tr><td>Premixing labor</td><td>bundled</td><td>$0 &mdash; two minutes of shaking</td></tr>
+<tr><td>Marketing &amp; customer acquisition</td><td>~$80&ndash;$120</td><td>$0 &mdash; no ad budget baked in</td></tr>
+<tr><td>Shipping</td><td>~$8&ndash;$10</td><td>$0 &mdash; free shipping included</td></tr>
+<tr class="hl"><td><strong>Effective cost per mg CBD</strong></td><td><strong>$0.02&ndash;$0.04+</strong></td><td><strong>$0.0127 (+ ~$0.0008/mg for your oil)</strong></td></tr>
+</tbody>
+<tfoot><tr><td colspan="3" style="font-size:.8rem;color:#777;">Premixed column is an illustrative reconstruction of typical DTC CBD cost structures from industry reporting; we have not audited any competitor. Our column is verifiable: $127 &divide; 10,000mg.</td></tr></tfoot>
+</table>
+
+<h2>Run the Numbers Yourself: Cost-Per-MG Reference Bands</h2>
+<p>Independent price trackers grade CBD value in three tiers:</p>
+<table class="data">
+<thead><tr><th>Grade</th><th>Cost per mg</th><th>What a 1,000mg bottle would cost</th></tr></thead>
+<tbody>
+<tr class="hl"><td>Bargain</td><td>&lt; $0.077</td><td>&lt; $77 &mdash; ours: <strong>$12.70-equivalent rate</strong></td></tr>
+<tr><td>Market average</td><td>$0.077 &ndash; $0.167</td><td>$77 &ndash; $167</td></tr>
+<tr><td>Pricey</td><td>&gt; $0.167</td><td>&gt; $167</td></tr>
+</tbody>
+</table>
+<p>At $0.0127/mg, our concentrate prices out at about <strong>six times below the bottom of the bargain band</strong>. That's not a discount &mdash; it's a different cost structure.</p>
+
+<h2>Three Refinements Most Price Guides Skip</h2>
+<ol>
+<li><strong>Divide by mg, never ml.</strong> Bottle volume says nothing about CBD content; concentration varies up to 50x between bottles of identical size.</li>
+<li><strong>Use the CoA, not just the label.</strong> Batch certificates of analysis report measured Total CBD. Dividing price by the verified number is the only lab-checked version of the math.</li>
+<li><strong>Count servings you'll actually use.</strong> A bottle is only cheaper per used milligram if you finish it before it ages out.</li>
+</ol>
+
+<h2>What $127 Actually Yields</h2>
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-num">10,000mg</div><div class="stat-label">Total CBD, 0% THC, batch CoA</div></div>
+<div class="stat-card"><div class="stat-num">~200</div><div class="stat-label">50mg servings</div></div>
+<div class="stat-card"><div class="stat-num">$0.64</div><div class="stat-label">Per 50mg serving</div></div>
+<div class="stat-card"><div class="stat-num">$54.25</div><div class="stat-label">Per bottle on the $217 double pack</div></div>
+</div>
+<p>Compare that serving cost to a typical $0.05&ndash;$0.20/mg tincture, where the same 50mg serving runs $2.50&ndash;$10. Ready to see the full picture? Start with <a href="/why-is-cbd-so-expensive.html">why CBD is so expensive</a>, then get the bottle on the <a href="/index.html#checkout">product page</a>.</p>
+
+<div class="cta-band">
+<h2 style="color:inherit;margin-top:0;">The Best-Value CBD on This Page Is Ours</h2>
+<p class="price-line">10,000mg squeeze-pour concentrate &middot; $127 &middot; $0.0127/mg</p>
+<a class="btn" href="/index.html#checkout">Get My Bottle &rarr;</a>
+<p style="margin:14px 0 0;font-size:.85rem;opacity:.8;">Free shipping &middot; Batch CoA included &middot; 18+</p>
+</div></main>
+<footer><div class="container">
+<div class="footer-links">
+<a href="/index.html">Home</a><a href="/best-value-cbd.html">Best Value CBD</a><a href="/why-is-cbd-so-expensive.html">Why Is CBD So Expensive</a><a href="/cbd-cost-breakdown.html">CBD Cost Breakdown</a><a href="/cheapest-way-to-buy-cbd.html">Cheapest Way to Buy CBD</a><a href="/diy-cbd-tincture-guide.html">DIY Tincture Guide</a><a href="/faq.html">FAQ</a>
+</div>
+<p>These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Not for use by or sale to persons under the age of 18. Consult a physician before use if you are pregnant, nursing, or taking medication.</p>
+<div class="footer-bottom">&copy; 2026 Simple Tinctures &middot; <span style="background:var(--accent-green);padding:3px 8px;border-radius:4px;font-weight:600;">18+</span> &middot; Third-party lab tested &middot; 0% THC</div>
+</div></footer>
+<div class="age-badge">18+</div>
+</body>
+</html>
