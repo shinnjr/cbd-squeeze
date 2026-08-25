@@ -92,7 +92,7 @@ footer a{color:var(--ink)}
 
 <div class="hero wrap">
   <p class="overline">Hemp-derived · &lt;0.3% Δ9-THC · Batch CoA · 18+</p>
-  <h1 id="painLine">Your tincture costs <b>$0.08 a milligram.</b><br>Ours costs <b>$0.0127.</b></h1>
+  <h1 id="painLine">Your CBD habit costs <b>$1,150 a year.</b><br>The same milligrams from us: <b>$207.</b></h1>
 
   <div class="reveal-q">
     <p class="q">What did you actually pay? <span style="color:var(--mut)">(price ÷ mg on the label)</span></p>
@@ -187,10 +187,12 @@ document.getElementById("bands").addEventListener("click",function(e){
   ppm=parseFloat(b.dataset.p);
   var v=document.getElementById("verdict"),mg=1500;
   var theirs=fmt(mg/1000*ppm*1000),ours=fmt(mg*OUR+OIL);
-  v.innerHTML='At their rate: <span class="red">'+theirs+'/mo</span>. With us: <span class="grn">'+ours+'/mo</span> — same plant.';
+  var yth=(mg/1000*ppm*1000)*12, yrs=(mg*OUR+OIL)*12;
+  v.innerHTML='That band: <span class="red">$'+Math.round(yth).toLocaleString()+' a year</span>. Ours: <span class="grn">$'+Math.round(yrs).toLocaleString()+' a year</span> — you keep <b>$'+Math.round(yth-yrs).toLocaleString()+' every year.</b>';
+  document.getElementById("painLine").innerHTML='Your CBD habit costs <b>$'+Math.round(yth).toLocaleString()+' a year.</b><br>The same milligrams from us: <b>$'+Math.round(yrs).toLocaleString()+'. </b>';
   v.classList.add("show");document.getElementById("afterReveal").classList.add("show");
   /* headline updates to THEIR band so the pain is literally their number */
-  document.getElementById("painLine").innerHTML='Your tincture costs <b>$'+ppm.toFixed(2)+' a milligram.</b><br>Ours costs <b>$0.0127.</b>';
+
 });
 setTimeout(function(){ document.getElementById("afterReveal").classList.add("show"); },2500);
 
