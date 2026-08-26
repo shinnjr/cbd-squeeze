@@ -53,7 +53,7 @@ nav .links a:hover{color:var(--ink)}
 .btn-primary:hover{background:var(--pink-deep);transform:translateY(-1px)}
 .btn-ghost{background:none;border:1.5px solid var(--line);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--pink)}
-.trust{margin-top:22px;font-size:12.5px;color:var(--sub)}
+.trust{margin-top:22px;font-size:11.5px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* PRODUCT CARD (CSS render) */
 .product-card{background:linear-gradient(160deg,#fff, #fdeef5);border:1px solid var(--line);border-radius:28px;padding:44px 36px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
@@ -151,17 +151,17 @@ footer a{color:rgba(255,255,255,.75)}
 <header class="hero wrap">
   <div>
     <span class="pill">CBD that respects your wallet</span>
-    <h1>Premium CBD.<br><span class="num">$0.0127</span> per milligram.<br>No markup game.</h1>
+    <h1>Premium CBD.<br><span class="num" style="white-space:nowrap">$0.0127&nbsp;per&nbsp;mg.</span><br>No markup game.</h1>
     <p class="sub">Premixed tinctures sell you $0.08–$0.13/mg — mostly MCT carrier oil and marketing. We sell you the 10,000mg concentrate straight. You add your own oil. Same result, <strong>$700+ a year stays yours</strong>.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#compare">See what you've been paying →</a>
-      <a class="btn btn-ghost" href="#offers">I'm convinced — $127</a>
+      <a class="btn btn-primary" href="#compare">See the math →</a>
+      <a class="btn btn-ghost" href="#offers">Get the 10,000mg isolate — $127</a>
     </div>
-    <p class="trust">✓ Third-party lab tested &nbsp;·&nbsp; ✓ 0% THC &nbsp;·&nbsp; ✓ 30-day money-back &nbsp;·&nbsp; ✓ Ships from Colorado</p>
+    <p class="trust">✓ <a href="/lab-results.html" style="color:var(--green);text-decoration:underline">Third-party lab tested — see CoA</a> &nbsp;·&nbsp; ✓ 0% THC &nbsp;·&nbsp; ✓ 30-day money-back &nbsp;·&nbsp; ✓ Ships from Colorado</p>
   </div>
   <div class="product-card">
-    <svg class="bottle" viewBox="0 0 90 150"><rect x="30" y="0" width="30" height="16" rx="4" fill="#33121f"/><rect x="33" y="18" width="24" height="8" fill="#e56b9f"/><path d="M22 34 Q22 28 30 28 L60 28 Q68 28 68 34 L72 132 Q72 146 58 146 L32 146 Q18 146 18 132 Z" fill="#fdf2f6" stroke="#33121f" stroke-width="2.5"/><rect x="27" y="62" width="36" height="46" rx="4" fill="#fff" stroke="#33121f" stroke-width="1.5"/><text x="45" y="80" text-anchor="middle" font-size="9" font-family="Georgia" fill="#33121f" font-weight="bold">10,000mg</text><text x="45" y="93" text-anchor="middle" font-size="6.5" font-family="monospace" fill="#c94d82">PURE ISOLATE</text></svg>
-    <div class="price-tag">$127<s>$159</s></div>
+    <svg class="bottle" viewBox="0 0 90 150"><rect x="30" y="0" width="30" height="16" rx="4" fill="#33121f"/><rect x="33" y="18" width="24" height="8" fill="#e56b9f"/><path d="M22 34 Q22 28 30 28 L60 28 Q68 28 68 34 L72 132 Q72 146 58 146 L32 146 Q18 146 18 132 Z" fill="#fdf2f6" stroke="#33121f" stroke-width="2.5"/><rect x="24" y="60" width="42" height="52" rx="5" fill="#fff" stroke="#33121f" stroke-width="1.5"/><text x="45" y="80" text-anchor="middle" font-size="8" font-family="Georgia" fill="#33121f" font-weight="bold">10,000mg</text><text x="45" y="92" text-anchor="middle" font-size="6" font-family="monospace" fill="#c94d82">PURE ISOLATE</text></svg>
+    <div class="price-tag">$127</div>
     <div><span class="per-mg">$0.0127 / mg · 8-month supply</span></div>
   </div>
 </header>
