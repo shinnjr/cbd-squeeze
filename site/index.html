@@ -198,12 +198,14 @@ footer a{color:rgba(255,255,255,.75)}
       <div>
         <div class="slider-row">
           <label>Your daily CBD (mg)</label>
-          <input type="range" id="mgSlider" min="10" max="200" step="5" value="40">
+          <input type="range" id="mgSlider" min="10" max="200" step="5" value="40" aria-label="Daily CBD mg">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--sub)"><span>10mg</span><span>200mg</span></div>
           <div class="mg-val" id="mgVal">40 mg/day</div>
         </div>
         <div class="slider-row" style="margin-top:26px">
           <label>Their price per mg</label>
-          <input type="range" id="ppmSlider" min="3" max="15" step="1" value="8">
+          <input type="range" id="ppmSlider" min="3" max="15" step="1" value="8" aria-label="Their price per mg">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--sub)"><span>$0.03</span><span>$0.15</span></div>
           <div class="mg-val" id="ppmVal">$0.08 / mg</div>
         </div>
       </div>
@@ -213,7 +215,7 @@ footer a{color:rgba(255,255,255,.75)}
         <div class="r"><span>You save monthly</span><b id="moSave"></b></div>
         <div class="r tot"><span>YOU SAVE YEARLY</span><b class="save" id="yrSave"></b></div>
         <p class="method">* $127 pouch ÷ 10,000mg + ~$2/mo food-grade MCT. Method printed right here — no fine print.</p>
-        <a href="/receipt.html?ppmg=0.08" id="rcptLink" style="font-size:12.5px;display:inline-block;margin-top:8px">Print your receipt →</a>
+        <a href="/receipt.html?ppmg=0.08" id="rcptLink" style="font-size:12.5px;display:inline-block;margin-top:8px">Print this receipt as your proof →</a>
       </div>
     </div>
   </div>
