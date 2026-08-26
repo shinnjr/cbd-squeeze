@@ -379,4 +379,30 @@ try{
 <script>
 addEventListener("scroll",()=>{document.getElementById("buybar").classList.toggle("show",scrollY>600)},{passive:true});
 </script>
+
+<div id="exitModal" style="display:none;position:fixed;inset:0;background:rgba(26,10,18,.55);z-index:200;align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:14px;padding:38px 34px;max-width:420px;width:92%;text-align:center;font-family:Inter,sans-serif">
+    <h3 style="font-family:'Fraunces',serif;font-size:26px;margin:0 0 8px">Before you go —</h3>
+    <p style="margin:0 0 18px;color:#5a4a52;font-size:15px;line-height:1.5">Drop your email and we'll send the <b>cost-per-mg cheat sheet</b> — every major brand compared, updated monthly.</p>
+    <form id="exitForm" style="display:flex;gap:8px">
+      <input type="email" required placeholder="you@email.com" style="flex:1;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px">
+      <button class="btn btn-primary" style="padding:12px 20px;border:none;border-radius:8px;background:var(--pink-deep);color:#fff;font-weight:600;cursor:pointer">Send it</button>
+    </form>
+    <button onclick="this.parentElement.parentElement.style.display='none'" style="background:none;border:none;color:#999;margin-top:14px;cursor:pointer;font-size:13px">No thanks</button>
+  </div>
+</div>
+<script>
+try{
+ if(!sessionStorage.exitShown){
+  document.documentElement.addEventListener("mouseleave",function h(e){
+   if(e.clientY<8){sessionStorage.exitShown=1;document.removeEventListener("mouseleave",h);
+    var m=document.getElementById("exitModal");m.style.display="flex";
+    document.getElementById("exitForm").addEventListener("submit",function(ev){ev.preventDefault();
+     var em=this.querySelector("input").value;
+     fetch("/api/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:em,source:"exit"})});
+     m.querySelector("div").innerHTML="<h3 style='font-family:Fraunces,serif'>Check your inbox 📬</h3><p style='color:#5a4a52'>The cheat sheet is on its way.</p>";});
+   }});
+ }
+}catch(e){}
+</script>
 </body></html>
