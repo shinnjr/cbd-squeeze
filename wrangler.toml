@@ -6,3 +6,6 @@ compatibility_date = "2026-08-01"
 [[kv_namespaces]]
 binding = "ST_TRACK"
 id = "cecc1d99c58d4ef88d7542282f0cf603"
+[[kv_namespaces]]
+binding = "ST_LEADS"
+id = "875ae26578c44709b1e889b2b5452f01"
