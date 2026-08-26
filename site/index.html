@@ -147,6 +147,13 @@ footer a{color:rgba(255,255,255,.75)}
   .badge-eyebrow{color:var(--pink-deep);border-color:var(--pink-deep)}
 }
 
+
+/* QA r7: align offer CTAs, fix orphans */
+.offers .offer{display:flex;flex-direction:column}
+.offers .offer .btn{margin-top:auto}
+.offers .offer ul{margin-bottom:18px}
+h2{white-space:normal}
+
 </style>
 </head>
 <body>
@@ -251,20 +258,20 @@ footer a{color:rgba(255,255,255,.75)}
   <div class="wrap">
     <div class="sec-head">
       <p class="kicker">Pick your setup</p>
-      <h2>Every option beats retail by 80%+</h2>
+      <h2>Every option beats retail by&nbsp;<b style="white-space:nowrap">80%+</b></h2>
       <p>30-day money-back guarantee on all of them — full refund, keep the bottle.</p>
     </div>
     <div class="offers">
       <div class="offer">
         <h3>Starter</h3>
-        <div class="price">$127</div><div class="per">one-time · ~$16/mo at 40mg/day · free shipping</div>
+        <div class="price">$127</div><div class="per">one-time · ~$16/mo at 40mg/day</div>
         <ul><li>10,000mg concentrate</li><li>Recipe card included · <b>free shipping</b></li><li>Batch CoA</li></ul>
         <a class="btn btn-ghost" href="/order.html?plan=single" style="width:100%">Start solo</a>
       </div>
       <div class="offer best">
         <span class="tag">BEST VALUE</span>
         <h3>Double Down</h3>
-        <div class="price">$217</div><div class="per">two bottles · $13.5/mo each</div>
+        <div class="price">$217</div><div class="per">two bottles · $13.50/mo each</div>
         <ul><li>20,000mg total</li><li>Best per-mg price</li><li>Free shipping</li></ul>
         <a class="btn btn-primary" href="/order.html?plan=double" style="width:100%">Go double</a>
       </div>
