@@ -232,7 +232,7 @@ h2{white-space:normal}
         <div class="r"><span>Their monthly cost</span><b id="theirMo" style="color:var(--red)"></b></div>
         <div class="r"><span>Our monthly cost*</span><b id="ourMo" style="color:var(--green)"></b></div>
         <div class="r"><span>You save monthly</span><b id="moSave"></b></div>
-        <div class="r tot"><span>YOU SAVE YEARLY</span><b class="save" id="yrSave"></b></div>
+        <div class="r tot"><span class="lbl">YOU SAVE YEARLY</span><b class="save" id="yrSave"></b></div>
         <p class="method"><span style="font-size:13px;color:var(--ink)">$127 pouch ÷ 10,000mg + ~$2/mo food-grade MCT. Method printed right here — no fine print.</span></p>
         <a href="/receipt.html?ppmg=0.08" id="rcptLink" style="font-size:12.5px;display:inline-block;margin-top:8px">Print this receipt as your proof →</a>
       </div>
@@ -342,8 +342,10 @@ function calc(){
   const theirMo=ppm*mg*30, ourMo=OUR_PPMG*mg*30+2, moSave=theirMo-ourMo;
   theirMoEl=document.getElementById("theirMo");theirMoEl.textContent=money(theirMo);
   document.getElementById("ourMo").textContent=money(ourMo);
-  document.getElementById("moSave").textContent=money(moSave);
-  document.getElementById("yrSave").textContent=money(moSave*12)+" /year";
+  document.getElementById("moSave").textContent=money(Math.max(moSave,0));
+  document.getElementById("yrSave").textContent=money(Math.max(moSave,0)*12)+" /year";
+  var sv=document.getElementById("saveRow");
+  if(moSave<0){sv.querySelector(".lbl").textContent="You'd use so little that a retail bottle is fine — we're built for regulars";}else{sv.querySelector(".lbl").textContent="YOU SAVE YEARLY";}
   document.getElementById("rcptLink").href="/receipt.html?ppmg="+ppm.toFixed(2);
 }
 ["mgSlider","ppmSlider"].forEach(id=>document.getElementById(id).addEventListener("input",calc));calc();
