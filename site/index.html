@@ -128,7 +128,7 @@ input[type=range]{width:100%;accent-color:var(--pink);height:34px}
 
 /* FAQ */
 .faq details{background:var(--card);border-radius:18px;padding:0 26px;border:1px solid var(--line);margin-bottom:12px}
-.faq summary{cursor:pointer;padding:20px 0;font-family:'Spline Sans Mono';font-weight:600;font-size:14.5px;list-style:none;position:relative}
+.faq summary{cursor:pointer;padding:20px 0;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;list-style:none;position:relative}
 .faq summary::after{content:"+";position:absolute;right:0;color:var(--pink-deep);font-size:20px}
 .faq details[open] summary::after{content:"–"}
 .faq p{padding:0 0 20px;color:var(--sub);font-size:14.5px;line-height:1.65}
@@ -160,13 +160,13 @@ footer a{color:rgba(255,255,255,.75)}
     <p class="trust">✓ <a href="/lab-results.html" style="color:var(--green);text-decoration:underline">Third-party lab tested — see CoA</a> &nbsp;·&nbsp; ✓ 0% THC &nbsp;·&nbsp; ✓ 30-day money-back &nbsp;·&nbsp; ✓ Ships from Colorado</p>
   </div>
   <div class="product-card">
-    <svg class="bottle" viewBox="0 0 90 150"><rect x="30" y="0" width="30" height="16" rx="4" fill="#33121f"/><rect x="33" y="18" width="24" height="8" fill="#e56b9f"/><path d="M22 34 Q22 28 30 28 L60 28 Q68 28 68 34 L72 132 Q72 146 58 146 L32 146 Q18 146 18 132 Z" fill="#fdf2f6" stroke="#33121f" stroke-width="2.5"/><rect x="24" y="60" width="42" height="52" rx="5" fill="#fff" stroke="#33121f" stroke-width="1.5"/><text x="45" y="80" text-anchor="middle" font-size="8" font-family="Georgia" fill="#33121f" font-weight="bold">10,000mg</text><text x="45" y="92" text-anchor="middle" font-size="6" font-family="monospace" fill="#c94d82">PURE ISOLATE</text></svg>
+    <svg class="bottle" viewBox="0 0 90 150"><rect x="30" y="0" width="30" height="16" rx="4" fill="#33121f"/><rect x="33" y="18" width="24" height="8" fill="#e56b9f"/><path d="M22 34 Q22 28 30 28 L60 28 Q68 28 68 34 L72 132 Q72 146 58 146 L32 146 Q18 146 18 132 Z" fill="#fdf2f6" stroke="#33121f" stroke-width="2.5"/><rect x="24" y="60" width="42" height="52" rx="5" fill="#fff" stroke="#33121f" stroke-width="1.5"/><text x="45" y="80" text-anchor="middle" font-size="8" font-family="Georgia" fill="#33121f" font-weight="bold">10,000mg</text><text x="45" y="92" text-anchor="middle" font-size="5.2" font-family="monospace" fill="#c94d82">ISOLATE</text></svg>
     <div class="price-tag">$127</div>
-    <div><span class="per-mg">$0.0127 / mg · 8-month supply</span></div>
+    <div><span class="per-mg">$0.0127 / mg · ~8 months at 40mg/day</span></div>
   </div>
 </header>
 
-<div class="strip"><span>PREMIXED TINCTURES: $0.08–$0.13 PER MG &nbsp;·&nbsp; <b>OURS: $0.0127</b> &nbsp;·&nbsp; SAME PLANT · SAME ROUTINE · DIFFERENT RECEIPT &nbsp;·&nbsp; PREMIXED TINCTURES: $0.08–$0.13 PER MG &nbsp;·&nbsp; <b>OURS: $0.0127</b> &nbsp;·&nbsp; SAME PLANT · SAME ROUTINE · DIFFERENT RECEIPT &nbsp;·&nbsp;</span></div>
+<div class="strip"><span>PREMIXED TINCTURES: $0.08–$0.13 PER MG &nbsp;·&nbsp; <b>OURS: $0.0127</b> &nbsp;·&nbsp; BATCH COA WITH EVERY ORDER &nbsp;·&nbsp; 0% THC &nbsp;·&nbsp; SHIPS FROM COLORADO &nbsp;·&nbsp; PREMIXED TINCTURES: $0.08–$0.13 PER MG &nbsp;·&nbsp; <b>OURS: $0.0127</b> &nbsp;·&nbsp; BATCH COA WITH EVERY ORDER &nbsp;·&nbsp; 0% THC &nbsp;·&nbsp; SHIPS FROM COLORADO &nbsp;·&nbsp;</span></div>
 
 <section id="compare">
   <div class="wrap">
@@ -176,6 +176,7 @@ footer a{color:rgba(255,255,255,.75)}
       <p>Pick a brand. We'll show what their per-mg price costs you over a year of daily use — against ours.</p>
     </div>
     <div class="brands" id="brandGrid"></div>
+    <p style="text-align:center;margin-top:16px;font-size:12.5px;color:var(--sub)">Ranges are representative retail per-mg figures — full math linked when you pick. Brand not listed? <a href="#calculator">Run it through the calculator.</a></p>
     <div class="verdict" id="verdict">
       <div class="big" id="vBig"></div>
       <p class="meta" id="vMeta"></p>
@@ -237,6 +238,7 @@ footer a{color:rgba(255,255,255,.75)}
     <div class="sec-head">
       <p class="kicker">Pick your setup</p>
       <h2>Every option beats retail by 80%+</h2>
+      <p>30-day money-back guarantee on all of them — full refund, keep the bottle.</p>
     </div>
     <div class="offers">
       <div class="offer">
@@ -254,8 +256,8 @@ footer a{color:rgba(255,255,255,.75)}
       </div>
       <div class="offer">
         <h3>Math Club</h3>
-        <div class="price">$107<span style="font-size:17px;color:var(--sub)">/mo</span></div><div class="per">auto-refill · skip anytime</div>
-        <ul><li>New pouch monthly</li><li>Cheapest committed rate</li><li>Cancel whenever</li></ul>
+        <div class="price">$107<span style="font-size:17px;color:var(--sub)">/mo</span></div><div class="per">monthly refill · for daily heavy users (100mg+)</div>
+        <ul><li>New pouch monthly</li><li>No decision fatigue — auto-ships</li><li>Cancel whenever</li></ul>
         <a class="btn btn-ghost" href="/order.html?plan=sub" style="width:100%">Join monthly</a>
       </div>
     </div>
@@ -274,9 +276,16 @@ footer a{color:rgba(255,255,255,.75)}
   <details><summary>Is this legal?</summary><p>Yes. Hemp-derived CBD with 0% THC, farm-bill compliant, shipped legally from Colorado. Lab reports available for every batch.</p></details>
 </section>
 
+<section style="background:var(--ink);color:#fff;text-align:center;padding:70px 24px">
+  <h2 class="serif" style="font-size:clamp(30px,4vw,48px);color:#fff">The math is on the page.<br><span style="color:var(--pink)">The bottle is $127.</span></h2>
+  <a href="#offers" class="btn btn-primary" style="margin-top:26px">Get the 10,000mg concentrate →</a>
+  <p style="margin-top:16px;font-size:12.5px;opacity:.65">30-day money-back · you keep the bottle either way</p>
+</section>
+
 <footer>
   <div class="wrap">
     <p><strong style="color:#fff">Simple Tinctures</strong> · Denver, Colorado</p>
+    <p style="margin-top:10px"><a href="/lab-results.html">Lab results</a> · <a href="/faq.html">FAQ</a> · <a href="/guide.html">Guide</a> · <a href="/cost-per-mg.html">Cost per mg</a></p>
     <p style="margin-top:10px;opacity:.7">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a physician if pregnant/nursing. 18+ only. © 2026 Simple Tinctures.</p>
   </div>
 </footer>
