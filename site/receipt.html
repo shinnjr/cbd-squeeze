@@ -18,17 +18,20 @@ a.btn{display:block;text-align:center;margin-top:16px;background:#17150f;color:#
 <div class="receipt">
   <h2>SIMPLE TINCTURES</h2>
   <p class="sub">YOUR YEAR OF CBD — ITEMIZED</p>
-  <div class="line"><span>Their tinctures (12 mo)</span><span id="their">$1,152.00</span></div>
-  <div class="line"><span>Our concentrate + MCT (12 mo)</span><span>$207.00</span></div>
+  <div class="line"><span>Their tinctures (1 yr @ 40mg/day)</span><span id="their">$1,152.00</span></div>
+  <div class="line"><span>Our concentrate + MCT (1 yr)</span><span>$207.00</span></div>
   <div class="total"><div style="display:flex;justify-content:space-between"><span>YOU KEEP</span><span class="save" id="kept">$945.00</span></div></div>
   <div class="bar"></div>
   <p class="note">Same milligrams. Same routine.<br>You just stopped paying someone to pour oil.</p>
   <a class="btn" href="/">Do your own receipt → simpletinctures.com</a>
 </div>
 <script>
-const p=new URLSearchParams(location.search).get("ppmg")||"0.08";
-const their=Math.round(1200*parseFloat(p));
+const p=parseFloat(new URLSearchParams(location.search).get("ppmg"))||0.08;
+const MG_YR=40*30*12; /* 14,400 mg/yr at 40 mg/day */
+const their=Math.round(MG_YR*p);
+const ours=Math.round(127*1.5+24); /* 1.5 pouches/yr + MCT */
 document.getElementById("their").textContent="$"+their.toLocaleString()+".00";
-document.getElementById("kept").textContent="$"+Math.max(0,their-207).toLocaleString()+".00";
+document.getElementById("ours")&& (document.getElementById("ours").textContent="$"+ours.toLocaleString()+".00");
+document.getElementById("kept").textContent="$"+Math.max(0,their-ours).toLocaleString()+".00";
 </script>
 </body></html>
