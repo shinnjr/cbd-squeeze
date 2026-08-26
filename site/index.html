@@ -15,7 +15,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#fdf2f6; --card:#ffffff; --ink:#33121f; --sub:#7a5561;
@@ -25,7 +25,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}body{overflow-x:hidden}
-body{background:var(--bg);color:var(--ink);font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:15px;line-height:1.6}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.65}
+.mono{font-family:'Spline Sans Mono',ui-monospace,monospace}
 h1,h2,.serif{font-family:'Fraunces',Georgia,serif}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 a{color:var(--pink-deep)}
@@ -35,7 +36,7 @@ a{color:var(--pink-deep)}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1080px;margin:0 auto}
 .logo{font-family:'Fraunces',serif;font-size:22px;color:var(--ink);text-decoration:none;font-weight:600}
 .logo em{color:var(--pink-deep);font-style:normal}
-nav .links a{font-size:13px;margin-left:22px;text-decoration:none;color:var(--sub)}
+nav .links a{font-size:13px;margin-left:10px;padding:12px 8px;display:inline-block;text-decoration:none;color:var(--sub)}
 nav .links a:hover{color:var(--ink)}
 .navbuy{background:var(--pink);color:#fff!important;padding:8px 18px;border-radius:24px;font-weight:600}
 .navbuy:hover{background:var(--pink-deep)}
@@ -46,7 +47,7 @@ nav .links a:hover{color:var(--ink)}
 .pill{display:inline-block;background:var(--pink-soft);color:#8f2c55;font-size:12px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:.04em}
 .hero h1{font-size:clamp(38px,5.5vw,62px);line-height:1.04;font-weight:600;letter-spacing:-.02em}
 .hero h1 .num{color:var(--pink-deep)}
-.hero p.sub{margin:20px 0 30px;font-size:16.5px;max-width:52ch}
+.hero p.sub{margin:20px 0 30px;font-size:16.5px;max-width:52ch;color:#4a2433}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 @media(max-width:560px){.cta-row{flex-direction:column}.cta-row .btn{width:100%;text-align:center}}
 .btn{display:inline-block;padding:16px 34px;border-radius:28px;font:inherit;font-weight:600;font-size:15.5px;cursor:pointer;text-decoration:none;border:none}
@@ -109,7 +110,7 @@ input[type=range]{width:100%;accent-color:var(--pink);height:34px}
 .step{background:var(--card);border-radius:22px;padding:30px;border:1px solid var(--line)}
 .step .n{width:40px;height:40px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-bottom:16px}
 .step h3{font-family:'Fraunces',serif;font-size:20px;margin-bottom:8px}
-.step p{color:var(--sub);font-size:13.5px}
+.step p{color:var(--sub);font-size:14px;line-height:1.6}
 
 /* OFFERS */
 .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -130,7 +131,7 @@ input[type=range]{width:100%;accent-color:var(--pink);height:34px}
 .faq summary{cursor:pointer;padding:20px 0;font-family:'Spline Sans Mono';font-weight:600;font-size:14.5px;list-style:none;position:relative}
 .faq summary::after{content:"+";position:absolute;right:0;color:var(--pink-deep);font-size:20px}
 .faq details[open] summary::after{content:"–"}
-.faq p{padding:0 0 20px;color:var(--sub);font-size:14px}
+.faq p{padding:0 0 20px;color:var(--sub);font-size:14.5px;line-height:1.65}
 
 footer{background:var(--ink);color:rgba(255,255,255,.75);padding:44px 0;font-size:12px;line-height:1.7}
 footer a{color:rgba(255,255,255,.75)}
@@ -150,7 +151,7 @@ footer a{color:rgba(255,255,255,.75)}
 <header class="hero wrap">
   <div>
     <span class="pill">CBD that respects your wallet</span>
-    <h1>Premium CBD.<br><span class="num" style="white-space:nowrap">$0.0127&nbsp;per&nbsp;mg.</span><br>No markup game.</h1>
+    <h1>Premium CBD.<br><span class="num" style="white-space:nowrap">$0.0127&nbsp;per&nbsp;mg.</span><br>Lab-tested. Nothing else in the bottle.</h1>
     <p class="sub">Premixed tinctures sell you $0.08–$0.13/mg — mostly MCT carrier oil and marketing. We sell you the 10,000mg concentrate straight. You add your own oil. Same result, <strong>$700+ a year stays yours</strong>.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#compare">See the math →</a>
@@ -279,6 +280,14 @@ footer a{color:rgba(255,255,255,.75)}
     <p style="margin-top:10px;opacity:.7">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a physician if pregnant/nursing. 18+ only. © 2026 Simple Tinctures.</p>
   </div>
 </footer>
+<div id="stickyCta" style="position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(51,18,31,.97);color:#fff;display:none;justify-content:center;align-items:center;gap:18px;padding:12px 18px">
+  <span style="font-size:13px">10,000mg · <b style="color:var(--pink)">$0.0127/mg</b> · 30-day guarantee</span>
+  <a href="#offers" style="background:var(--pink);color:#fff;text-decoration:none;font-weight:600;font-size:13.5px;padding:11px 26px;border-radius:22px">Get it — $127</a>
+</div>
+<script>
+addEventListener('scroll',()=>{const s=document.getElementById('stickyCta');
+s.style.display=(scrollY>900)?'flex':'none';},{passive:true});
+</script>
 
 <script src="/js/track.js"></script>
 <script>
