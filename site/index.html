@@ -363,8 +363,8 @@ function calc(){
 try{
   var v = sessionStorage.getItem("ab_cta") || (Math.random()<.5?"A":"B");
   sessionStorage.setItem("ab_cta",v);
-  if(v==="B"){var a=document.querySelector(".hero .btn-primary"),b=document.querySelector(".hero .btn-ghost");
-    if(a&&b&&a.parentNode===b.parentNode){a.parentNode.insertBefore(b,a);}}
+  if(v==="B"){var hs=document.querySelectorAll('a[href="/order.html?plan=single"],a[href="#compare"]');
+    if(hs.length===2&&hs[0].parentNode===hs[1].parentNode){hs[0].parentNode.insertBefore(hs[1],hs[0]);}}
   if(window.st){st("ab_view",{v:v});}
 }catch(e){}
 </script>
