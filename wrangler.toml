@@ -1,0 +1,6 @@
+
+name = "simpletinctures"
+pages_build_output_dir = "site"
+[[kv_namespaces]]
+binding = "ST_TRACK"
+id = "cecc1d99c58d4ef88d7542282f0cf603"

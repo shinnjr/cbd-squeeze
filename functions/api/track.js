@@ -9,7 +9,9 @@ export async function onRequestPost(context) {
     const line = JSON.stringify({ ...ev, ip: undefined, ua: context.request.headers.get("user-agent") || "" }) + "\n";
     // Store in the Pages KV binding if present (ST_TRACK), else no-op success.
     try {
-      await context.env.ST_TRACK.append(line);
+      const k = "events:" + new Date().toISOString().slice(0, 13); // hourly bucket
+      const prev = (await context.env.ST_TRACK.get(k)) || "";
+      await context.env.ST_TRACK.put(k, prev + line);
     } catch {}
     return new Response("ok", { headers: { "content-type": "text/plain" } });
   } catch {
