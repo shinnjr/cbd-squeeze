@@ -154,6 +154,13 @@ footer a{color:rgba(255,255,255,.75)}
 .offers .offer ul{margin-bottom:18px}
 h2{white-space:normal}
 
+
+/* STICKY MOBILE BUY BAR */
+#buybar{position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:#fff;display:none;justify-content:space-between;align-items:center;padding:12px 18px;z-index:99;transform:translateY(100%);transition:.3s}
+#buybar.show{transform:none}
+#buybar .bb-price{font-family:'Fraunces',serif;font-size:20px;font-weight:600}
+#buybar .bb-btn{background:var(--pink-deep);color:#fff;text-decoration:none;font-weight:600;padding:11px 22px;border-radius:24px;font-size:14px}
+@media(max-width:640px){#buybar{display:flex}body{padding-bottom:64px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Simple Tinctures 10,000mg CBD Isolate Concentrate","image":"https://www.simpletinctures.com/assets/hero-bottle-800.png","description":"10,000mg pure CBD isolate concentrate. Mix your own tincture at $0.0127 per mg — roughly 80% below typical retail per-mg pricing.","brand":{"@type":"Brand","name":"Simple Tinctures"},"offers":{"@type":"Offer","url":"https://www.simpletinctures.com/order.html","priceCurrency":"USD","price":"127.00","availability":"https://schema.org/InStock"}}
@@ -367,5 +374,9 @@ try{
     if(hs.length===2&&hs[0].parentNode===hs[1].parentNode){hs[0].parentNode.insertBefore(hs[1],hs[0]);}}
   if(window.st){st("ab_view",{v:v});}
 }catch(e){}
+</script>
+<div id="buybar"><span class="bb-price">$127</span><a class="bb-btn" href="/order.html?plan=single">Get it →</a></div>
+<script>
+addEventListener("scroll",()=>{document.getElementById("buybar").classList.toggle("show",scrollY>600)},{passive:true});
 </script>
 </body></html>
