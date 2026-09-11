@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order confirmed — Simple Tinctures</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.simpletinctures.com/order/confirmed">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta name="theme-color" content="#faf7f0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17150f;--paper:#faf7f0;--rule:#e3ddcd;--amber:#b06f16;--green:#2e5c40}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:15px;line-height:1.55}
+h1{font-family:'Newsreader',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;font-size:clamp(28px,4vw,40px);margin:12px 0 18px}
+.wrap{max-width:640px;margin:0 auto;padding:48px 22px 72px}
+.kicker{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+.check{font-size:42px;color:var(--green);line-height:1}
+.card{border:1.5px solid var(--ink);background:#fff;padding:22px;margin:22px 0}
+.row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:13.5px}
+.row:last-child{border-bottom:none}
+.row span:first-child{opacity:.6}
+.next{margin:22px 0;font-size:14px}
+.next li{margin:8px 0 8px 18px}
+.muted{font-size:13px;opacity:.7;margin:14px 0}
+.fine{font-size:11px;opacity:.55;margin-top:28px;line-height:1.5}
+a{color:var(--ink)}
+.age-badge{position:fixed;top:12px;right:12px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;padding:4px 8px}
+.test{display:none;border:1px dashed var(--amber);color:var(--amber);padding:10px;font-size:12px;margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="age-badge">18+</div>
+<main class="wrap">
+  <div class="test" id="testBanner">TEST mode — no live card charge. Processor not live yet.</div>
+  <p class="kicker">Order confirmed</p>
+  <div class="check" aria-hidden="true">✓</div>
+  <h1 id="thanks">Order confirmed — thanks!</h1>
+  <div class="card">
+    <div class="row"><span>Order #</span><span id="orderId">—</span></div>
+    <div class="row"><span>Amount</span><span id="amount">—</span></div>
+    <div class="row"><span>Qty</span><span id="qty">—</span></div>
+    <div class="row"><span>Type</span><span id="type">—</span></div>
+    <div class="row"><span>Email</span><span id="email">—</span></div>
+  </div>
+  <ol class="next">
+    <li id="receiptLine">Receipt details are on this page (email when processor is live).</li>
+    <li>Ships within 1–2 business days from Colorado.</li>
+    <li>Your recipe card is in the box — first tincture in about 2 minutes.</li>
+  </ol>
+  <p class="muted">~10 × 1,000 mg tinctures · value-disruption pricing · 30-day money-back guarantee. Unhappy? Full refund.</p>
+  <p class="muted" id="subLine" hidden>Pause or cancel anytime — one email, no phone call.</p>
+  <p class="muted">Questions? <a href="mailto:orders@simpletinctures.com">orders@simpletinctures.com</a></p>
+  <p><a href="/">← Back to the math</a></p>
+  <p class="fine">These statements have not been evaluated by the FDA; this product is not intended to diagnose, treat, cure, or prevent any disease. Pure CBD isolate · 0% THC (well under the 0.3% hemp limit). 18+ only.</p>
+</main>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var order = q.get("order") || "—";
+  var amount = q.get("amount");
+  var qty = q.get("qty") || "1";
+  var sub = q.get("subscribe") === "1";
+  var email = q.get("email") || "";
+  var name = q.get("name") || "";
+  document.getElementById("orderId").textContent = order;
+  document.getElementById("amount").textContent = amount ? ("$" + Number(amount).toFixed(2)) : "—";
+  document.getElementById("qty").textContent = qty;
+  document.getElementById("type").textContent = sub ? "Subscription ($107/mo per bottle)" : "One-time";
+  document.getElementById("email").textContent = email || "—";
+  if (name) {
+    var first = name.trim().split(/\s+/)[0];
+    document.getElementById("thanks").textContent = "Order confirmed — thanks, " + first + "!";
+  }
+  if (email) document.getElementById("receiptLine").textContent = "Receipt sent to " + email + " (when email delivery is wired).";
+  if (sub) document.getElementById("subLine").hidden = false;
+  if (String(order).indexOf("ST-") === 0) document.getElementById("testBanner").style.display = "block";
+})();
+</script>
+</body>
+</html>
